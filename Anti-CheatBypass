@@ -1,0 +1,55 @@
+local ReplicatedStorage = game:GetService("ReplicatedStorage")
+local Players = game:GetService("Players")
+
+local targetRemote = ReplicatedStorage:WaitForChild("Event")
+local LocalPlayer = Players.LocalPlayer
+
+hookfunction(game.Players.LocalPlayer.Kick, newcclosure(function() return end))
+
+hookfunction(task.delay, newcclosure(function(time, callback)
+    if time == 2 then
+        local callbackInfo = debug.getinfo(callback)
+        if callbackInfo then
+            local success, source = pcall(function()
+                return string.dump(callback)
+            end)
+            if success then
+                if source:find("Instance%.new") and source:find("Part") and source:find("workspace") then
+                    if source:find("while true do") then
+                        return nil
+                    end
+                end
+            end
+        end
+    end
+    return task.delay(time, callback)
+end))
+
+local originalNamecall = hookmetamethod(game, "__namecall", newcclosure(function(self, ...)
+    local ok, method = pcall(getnamecallmethod)
+    if not ok or not method then 
+        return originalNamecall(self, ...) 
+    end
+    local lowerMethod = string.lower(method)
+
+    if self == LocalPlayer and lowerMethod == "kick" then
+        return nil
+    end
+
+    if self == targetRemote and lowerMethod == "fireserver" then
+        local args = {...}
+        for _, arg in ipairs(args) do
+            if type(arg) == "table" then
+                for key, value in pairs(arg) do
+                    if type(value) == "string" and value:find("★") then
+                        return nil
+                    end
+                end
+            elseif type(arg) == "string" and arg:find("★") then
+                return nil
+            end
+        end
+    end
+
+    return originalNamecall(self, ...)
+end))
