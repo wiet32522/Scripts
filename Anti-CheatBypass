@@ -6,7 +6,6 @@ local targetRemote = ReplicatedStorage:FindFirstChild("Event")
 
 local originalNamecall
 originalNamecall = hookmetamethod(game, "__namecall", newcclosure(function(self, ...)
-    -- 100% safe namecall method fetch
     local success, method = pcall(getnamecallmethod)
     if not success or not method then
         return originalNamecall(self, ...)
@@ -48,7 +47,6 @@ local originalInstanceNew = hookfunction(Instance.new, newcclosure(function(clas
         end
 
         if partCreationCount >= 10 then
-            -- Block the creation by returning nil
             return nil
         end
 
