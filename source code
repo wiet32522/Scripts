@@ -1,0 +1,4508 @@
+--[[
+
+		Gui2Lua™
+		10zOfficial
+		Version 1.0.0
+
+]]
+
+
+-- Instances
+
+local DivazScript = Instance.new("ScreenGui")
+local MainFrame = Instance.new("Frame")
+local NavBar = Instance.new("Frame")
+local MiscButton = Instance.new("TextButton")
+local FarmButton = Instance.new("TextButton")
+local EspButton = Instance.new("TextButton")
+local CombatButton = Instance.new("TextButton")
+local BuyButton = Instance.new("TextButton")
+local Frame = Instance.new("Frame")
+local TextLabel = Instance.new("TextLabel")
+local UICorner = Instance.new("UICorner")
+local Frame_2 = Instance.new("Frame")
+local Frame_3 = Instance.new("Frame")
+local UICorner_2 = Instance.new("UICorner")
+local VersionLabel = Instance.new("TextLabel")
+local UICorner_3 = Instance.new("UICorner")
+local RiskLabel = Instance.new("TextLabel")
+local UICorner_4 = Instance.new("UICorner")
+local UICorner_5 = Instance.new("UICorner")
+local CombatFrame = Instance.new("ScrollingFrame")
+local UICorner_6 = Instance.new("UICorner")
+local UIListLayout = Instance.new("UIListLayout")
+local UIPadding = Instance.new("UIPadding")
+local TargetUser = Instance.new("TextButton")
+local UICorner_7 = Instance.new("UICorner")
+local UserBox = Instance.new("TextBox")
+local UICorner_8 = Instance.new("UICorner")
+local Autoheal = Instance.new("TextButton")
+local UICorner_9 = Instance.new("UICorner")
+local Autoeat = Instance.new("TextButton")
+local UICorner_10 = Instance.new("UICorner")
+local Fling = Instance.new("TextButton")
+local UICorner_11 = Instance.new("UICorner")
+local Spamgrabhair = Instance.new("TextButton")
+local UICorner_12 = Instance.new("UICorner")
+local GrabPlayertovoid = Instance.new("TextButton")
+local UICorner_13 = Instance.new("UICorner")
+local UserBox_2 = Instance.new("TextBox")
+local UICorner_14 = Instance.new("UICorner")
+local AutoFight = Instance.new("TextButton")
+local UICorner_15 = Instance.new("UICorner")
+local EspFrame = Instance.new("ScrollingFrame")
+local UICorner_16 = Instance.new("UICorner")
+local UIListLayout_2 = Instance.new("UIListLayout")
+local UIPadding_2 = Instance.new("UIPadding")
+local HealthEsp = Instance.new("TextButton")
+local UICorner_17 = Instance.new("UICorner")
+local HighLightPlayer = Instance.new("TextButton")
+local UICorner_18 = Instance.new("UICorner")
+local NameEsp = Instance.new("TextButton")
+local UICorner_19 = Instance.new("UICorner")
+local RobberyEsp = Instance.new("TextButton")
+local UICorner_20 = Instance.new("UICorner")
+local Tracers = Instance.new("TextButton")
+local UICorner_21 = Instance.new("UICorner")
+local FarmingFrame = Instance.new("ScrollingFrame")
+local UICorner_22 = Instance.new("UICorner")
+local UIListLayout_3 = Instance.new("UIListLayout")
+local UIPadding_3 = Instance.new("UIPadding")
+local ATMsFarm = Instance.new("TextButton")
+local UICorner_23 = Instance.new("UICorner")
+local KillAll = Instance.new("TextButton")
+local UICorner_24 = Instance.new("UICorner")
+local KillAll1 = Instance.new("TextButton")
+local UICorner_25 = Instance.new("UICorner")
+local MiscFrame = Instance.new("ScrollingFrame")
+local UICorner_26 = Instance.new("UICorner")
+local UIListLayout_4 = Instance.new("UIListLayout")
+local UIPadding_4 = Instance.new("UIPadding")
+local CopyText = Instance.new("TextButton")
+local UICorner_27 = Instance.new("UICorner")
+local Fly = Instance.new("TextButton")
+local UICorner_28 = Instance.new("UICorner")
+local FlySpeedBox = Instance.new("TextBox")
+local UICorner_29 = Instance.new("UICorner")
+local Noclip = Instance.new("TextButton")
+local UICorner_30 = Instance.new("UICorner")
+local Speed = Instance.new("TextButton")
+local UICorner_31 = Instance.new("UICorner")
+local SpeedBox = Instance.new("TextBox")
+local UICorner_32 = Instance.new("UICorner")
+local DisableKeyBinds = Instance.new("TextButton")
+local UICorner_33 = Instance.new("UICorner")
+local AntiAfk = Instance.new("TextButton")
+local UICorner_34 = Instance.new("UICorner")
+local AutoWheel = Instance.new("TextButton")
+local UICorner_35 = Instance.new("UICorner")
+local AutoWheel_2 = Instance.new("TextButton")
+local UICorner_36 = Instance.new("UICorner")
+local BuyFrame = Instance.new("ScrollingFrame")
+local UICorner_37 = Instance.new("UICorner")
+local UIListLayout_5 = Instance.new("UIListLayout")
+local UIPadding_5 = Instance.new("UIPadding")
+local List1 = Instance.new("TextButton")
+local UICorner_38 = Instance.new("UICorner")
+
+-- Properties
+
+DivazScript.Name = "DivazScript"
+DivazScript.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+DivazScript.Enabled = false
+DivazScript.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+DivazScript.ResetOnSpawn = false
+
+MainFrame.Name = "MainFrame"
+MainFrame.Parent = DivazScript
+MainFrame.BackgroundColor3 = Color3.new(0.211765, 0.211765, 0.211765)
+MainFrame.BorderColor3 = Color3.new(0, 0, 0)
+MainFrame.BorderSizePixel = 0
+MainFrame.Position = UDim2.new(0.281050414, 0, 0.120257564, 0)
+MainFrame.Size = UDim2.new(0, 564, 0, 385)
+
+NavBar.Name = "NavBar"
+NavBar.Parent = MainFrame
+NavBar.BackgroundColor3 = Color3.new(1, 1, 1)
+NavBar.BackgroundTransparency = 1
+NavBar.BorderColor3 = Color3.new(0, 0, 0)
+NavBar.BorderSizePixel = 0
+NavBar.Size = UDim2.new(0, 199, 0, 385)
+
+MiscButton.Name = "MiscButton"
+MiscButton.Parent = NavBar
+MiscButton.BackgroundColor3 = Color3.new(0.176471, 0.176471, 0.176471)
+MiscButton.BorderColor3 = Color3.new(0, 0, 0)
+MiscButton.BorderSizePixel = 0
+MiscButton.Position = UDim2.new(0.00618939428, 0, 0.644189775, 0)
+MiscButton.Size = UDim2.new(0, 143, 0, 43)
+MiscButton.Font = Enum.Font.SourceSans
+MiscButton.Text = "Misc"
+MiscButton.TextColor3 = Color3.new(0.694118, 0.694118, 0.694118)
+MiscButton.TextSize = 35
+
+FarmButton.Name = "FarmButton"
+FarmButton.Parent = NavBar
+FarmButton.BackgroundColor3 = Color3.new(0.176471, 0.176471, 0.176471)
+FarmButton.BorderColor3 = Color3.new(0, 0, 0)
+FarmButton.BorderSizePixel = 0
+FarmButton.Position = UDim2.new(-0.000376332348, 0, 0.176623374, 0)
+FarmButton.Size = UDim2.new(0, 144, 0, 42)
+FarmButton.Font = Enum.Font.SourceSans
+FarmButton.Text = "Farms"
+FarmButton.TextColor3 = Color3.new(0.694118, 0.694118, 0.694118)
+FarmButton.TextSize = 35
+
+EspButton.Name = "EspButton"
+EspButton.Parent = NavBar
+EspButton.BackgroundColor3 = Color3.new(0.176471, 0.176471, 0.176471)
+EspButton.BorderColor3 = Color3.new(0, 0, 0)
+EspButton.BorderSizePixel = 0
+EspButton.Position = UDim2.new(0.00957331806, 0, 0.410423547, 0)
+EspButton.Size = UDim2.new(0, 143, 0, 47)
+EspButton.Font = Enum.Font.SourceSans
+EspButton.Text = "Visuals"
+EspButton.TextColor3 = Color3.new(0.694118, 0.694118, 0.694118)
+EspButton.TextSize = 35
+
+CombatButton.Name = "CombatButton"
+CombatButton.Parent = NavBar
+CombatButton.BackgroundColor3 = Color3.new(0.176471, 0.176471, 0.176471)
+CombatButton.BorderColor3 = Color3.new(0, 0, 0)
+CombatButton.BorderSizePixel = 0
+CombatButton.Position = UDim2.new(0.00957331806, 0, 0.285082132, 0)
+CombatButton.Size = UDim2.new(0, 143, 0, 49)
+CombatButton.Font = Enum.Font.SourceSans
+CombatButton.Text = "Combat"
+CombatButton.TextColor3 = Color3.new(0.694118, 0.694118, 0.694118)
+CombatButton.TextSize = 35
+
+BuyButton.Name = "BuyButton"
+BuyButton.Parent = NavBar
+BuyButton.BackgroundColor3 = Color3.new(0.176471, 0.176471, 0.176471)
+BuyButton.BorderColor3 = Color3.new(0, 0, 0)
+BuyButton.BorderSizePixel = 0
+BuyButton.Position = UDim2.new(0.00618939428, 0, 0.532501459, 0)
+BuyButton.Size = UDim2.new(0, 143, 0, 43)
+BuyButton.Font = Enum.Font.SourceSans
+BuyButton.Text = "Buy"
+BuyButton.TextColor3 = Color3.new(0.694118, 0.694118, 0.694118)
+BuyButton.TextSize = 35
+
+Frame.Parent = MainFrame
+Frame.BackgroundColor3 = Color3.new(0.137255, 0.137255, 0.137255)
+Frame.BorderColor3 = Color3.new(0, 0, 0)
+Frame.BorderSizePixel = 0
+Frame.Position = UDim2.new(-0.00177304959, 0, 0.00259740255, 0)
+Frame.Size = UDim2.new(0, 563, 0, 68)
+
+TextLabel.Parent = Frame
+TextLabel.BackgroundColor3 = Color3.new(0.137255, 0.137255, 0.137255)
+TextLabel.BorderColor3 = Color3.new(0, 0, 0)
+TextLabel.BorderSizePixel = 0
+TextLabel.Position = UDim2.new(0.0159857906, 0, 0, 0)
+TextLabel.Size = UDim2.new(0, 355, 0, 68)
+TextLabel.Font = Enum.Font.SourceSansBold
+TextLabel.Text = "Divaz Script : Wiet Hub"
+TextLabel.TextColor3 = Color3.new(1, 1, 1)
+TextLabel.TextSize = 35
+TextLabel.TextWrapped = true
+
+UICorner.Parent = TextLabel
+
+Frame_2.Parent = Frame
+Frame_2.BackgroundColor3 = Color3.new(0.137255, 0.137255, 0.137255)
+Frame_2.BorderColor3 = Color3.new(0, 0, 0)
+Frame_2.BorderSizePixel = 0
+Frame_2.Position = UDim2.new(0.239786863, 0, 5.64705896, 0)
+Frame_2.Size = UDim2.new(0, 23, 0, -322)
+
+Frame_3.Parent = Frame
+Frame_3.BackgroundColor3 = Color3.new(0.211765, 0.211765, 0.211765)
+Frame_3.BorderColor3 = Color3.new(0, 0, 0)
+Frame_3.BorderSizePixel = 0
+Frame_3.Position = UDim2.new(0.35346359, 0, 1, 0)
+Frame_3.Size = UDim2.new(0, 365, 0, 1)
+
+UICorner_2.Parent = Frame
+
+VersionLabel.Name = "VersionLabel"
+VersionLabel.Parent = Frame
+VersionLabel.BackgroundColor3 = Color3.new(0.137255, 0.137255, 0.137255)
+VersionLabel.BorderColor3 = Color3.new(0, 0, 0)
+VersionLabel.BorderSizePixel = 0
+VersionLabel.Position = UDim2.new(0.644760132, 0, 0, 0)
+VersionLabel.Size = UDim2.new(0, 200, 0, 22)
+VersionLabel.Font = Enum.Font.SourceSansBold
+VersionLabel.Text = ""
+VersionLabel.TextColor3 = Color3.new(1, 1, 1)
+VersionLabel.TextSize = 20
+VersionLabel.TextWrapped = true
+
+UICorner_3.Parent = VersionLabel
+
+RiskLabel.Name = "RiskLabel"
+RiskLabel.Parent = Frame
+RiskLabel.BackgroundColor3 = Color3.new(0.137255, 0.137255, 0.137255)
+RiskLabel.BorderColor3 = Color3.new(0, 0, 0)
+RiskLabel.BorderSizePixel = 0
+RiskLabel.Position = UDim2.new(0.646536291, 0, 0.323529422, 0)
+RiskLabel.Size = UDim2.new(0, 200, 0, 46)
+RiskLabel.Visible = false
+RiskLabel.Font = Enum.Font.SourceSansBold
+RiskLabel.Text = "Script did not update to this version use it at your own risk!"
+RiskLabel.TextColor3 = Color3.new(0.666667, 0, 0)
+RiskLabel.TextScaled = true
+RiskLabel.TextSize = 20
+RiskLabel.TextWrapped = true
+
+UICorner_4.Parent = RiskLabel
+
+UICorner_5.Parent = MainFrame
+
+CombatFrame.Name = "CombatFrame"
+CombatFrame.Parent = MainFrame
+CombatFrame.Active = true
+CombatFrame.BackgroundColor3 = Color3.new(0.211765, 0.211765, 0.211765)
+CombatFrame.BorderColor3 = Color3.new(0, 0, 0)
+CombatFrame.BorderSizePixel = 0
+CombatFrame.Position = UDim2.new(0.28014183, 0, 0.179220781, 0)
+CombatFrame.Size = UDim2.new(0, 405, 0, 314)
+
+UICorner_6.Parent = CombatFrame
+
+UIListLayout.Parent = CombatFrame
+UIListLayout.SortOrder = Enum.SortOrder.LayoutOrder
+UIListLayout.Padding = UDim.new(0.0149999997, 0)
+
+UIPadding.Parent = CombatFrame
+UIPadding.PaddingLeft = UDim.new(0.0299999993, 0)
+UIPadding.PaddingTop = UDim.new(0.00999999978, 0)
+
+TargetUser.Name = "TargetUser"
+TargetUser.Parent = CombatFrame
+TargetUser.BackgroundColor3 = Color3.new(0.196078, 0.196078, 0.196078)
+TargetUser.BorderColor3 = Color3.new(0, 0, 0)
+TargetUser.BorderSizePixel = 0
+TargetUser.Position = UDim2.new(6.31170494e-08, 0, 0.111400999, 0)
+TargetUser.Selectable = false
+TargetUser.Size = UDim2.new(0, 208, 0, 29)
+TargetUser.Font = Enum.Font.SourceSans
+TargetUser.Text = "Target User"
+TargetUser.TextColor3 = Color3.new(0.694118, 0.694118, 0.694118)
+TargetUser.TextSize = 35
+
+UICorner_7.Parent = TargetUser
+
+UserBox.Name = "UserBox"
+UserBox.Parent = TargetUser
+UserBox.BackgroundColor3 = Color3.new(0.196078, 0.196078, 0.196078)
+UserBox.BorderColor3 = Color3.new(0, 0, 0)
+UserBox.BorderSizePixel = 0
+UserBox.Position = UDim2.new(1.05186927, 0, 0, 0)
+UserBox.Size = UDim2.new(0, 145, 0, 29)
+UserBox.ClearTextOnFocus = false
+UserBox.Font = Enum.Font.SourceSans
+UserBox.PlaceholderColor3 = Color3.new(0.7, 0.7, 0.7)
+UserBox.Text = "UserName"
+UserBox.TextColor3 = Color3.new(0.694118, 0.694118, 0.694118)
+UserBox.TextSize = 25
+
+UICorner_8.Parent = UserBox
+
+Autoheal.Name = "Auto heal"
+Autoheal.Parent = CombatFrame
+Autoheal.BackgroundColor3 = Color3.new(0.196078, 0.196078, 0.196078)
+Autoheal.BorderColor3 = Color3.new(0, 0, 0)
+Autoheal.BorderSizePixel = 0
+Autoheal.Position = UDim2.new(-0.00509093842, 0, 0.219463781, 0)
+Autoheal.Selectable = false
+Autoheal.Size = UDim2.new(0, 364, 0, 29)
+Autoheal.Font = Enum.Font.SourceSans
+Autoheal.Text = "Auto heal on hopistal bed"
+Autoheal.TextColor3 = Color3.new(0.694118, 0.694118, 0.694118)
+Autoheal.TextSize = 35
+
+UICorner_9.Parent = Autoheal
+
+Autoeat.Name = "Auto eat"
+Autoeat.Parent = CombatFrame
+Autoeat.BackgroundColor3 = Color3.new(0.196078, 0.196078, 0.196078)
+Autoeat.BorderColor3 = Color3.new(0, 0, 0)
+Autoeat.BorderSizePixel = 0
+Autoeat.Position = UDim2.new(-0.00509093842, 0, 0.219463781, 0)
+Autoeat.Selectable = false
+Autoeat.Size = UDim2.new(0, 364, 0, 29)
+Autoeat.Font = Enum.Font.SourceSans
+Autoeat.Text = "Auto eat - Keybind H"
+Autoeat.TextColor3 = Color3.new(0.694118, 0.694118, 0.694118)
+Autoeat.TextScaled = true
+Autoeat.TextSize = 35
+Autoeat.TextWrapped = true
+
+UICorner_10.Parent = Autoeat
+
+Fling.Name = "Fling"
+Fling.Parent = CombatFrame
+Fling.BackgroundColor3 = Color3.new(0.196078, 0.196078, 0.196078)
+Fling.BorderColor3 = Color3.new(0, 0, 0)
+Fling.BorderSizePixel = 0
+Fling.Position = UDim2.new(0.0221657995, 0, 0.0241644923, 0)
+Fling.Size = UDim2.new(0, 361, 0, 29)
+Fling.Font = Enum.Font.SourceSans
+Fling.Text = "Fling - Use at your own RISK"
+Fling.TextColor3 = Color3.new(0.694118, 0.694118, 0.694118)
+Fling.TextSize = 35
+
+UICorner_11.Parent = Fling
+
+Spamgrabhair.Name = "Spam grab hair"
+Spamgrabhair.Parent = CombatFrame
+Spamgrabhair.BackgroundColor3 = Color3.new(0.196078, 0.196078, 0.196078)
+Spamgrabhair.BorderColor3 = Color3.new(0, 0, 0)
+Spamgrabhair.BorderSizePixel = 0
+Spamgrabhair.Position = UDim2.new(-0.00509093842, 0, 0.219463781, 0)
+Spamgrabhair.Selectable = false
+Spamgrabhair.Size = UDim2.new(0, 364, 0, 29)
+Spamgrabhair.Font = Enum.Font.SourceSans
+Spamgrabhair.Text = "Spam grab hair"
+Spamgrabhair.TextColor3 = Color3.new(0.694118, 0.694118, 0.694118)
+Spamgrabhair.TextSize = 35
+
+UICorner_12.Parent = Spamgrabhair
+
+GrabPlayertovoid.Name = "Grab Player to void"
+GrabPlayertovoid.Parent = CombatFrame
+GrabPlayertovoid.BackgroundColor3 = Color3.new(0.196078, 0.196078, 0.196078)
+GrabPlayertovoid.BorderColor3 = Color3.new(0, 0, 0)
+GrabPlayertovoid.BorderSizePixel = 0
+GrabPlayertovoid.Position = UDim2.new(6.31170494e-08, 0, 0.111400999, 0)
+GrabPlayertovoid.Selectable = false
+GrabPlayertovoid.Size = UDim2.new(0, 208, 0, 29)
+GrabPlayertovoid.Font = Enum.Font.SourceSans
+GrabPlayertovoid.Text = "Grab Player to void"
+GrabPlayertovoid.TextColor3 = Color3.new(0.694118, 0.694118, 0.694118)
+GrabPlayertovoid.TextScaled = true
+GrabPlayertovoid.TextSize = 35
+GrabPlayertovoid.TextWrapped = true
+
+UICorner_13.Parent = GrabPlayertovoid
+
+UserBox_2.Name = "UserBox"
+UserBox_2.Parent = GrabPlayertovoid
+UserBox_2.BackgroundColor3 = Color3.new(0.196078, 0.196078, 0.196078)
+UserBox_2.BorderColor3 = Color3.new(0, 0, 0)
+UserBox_2.BorderSizePixel = 0
+UserBox_2.Position = UDim2.new(1.05186927, 0, 0, 0)
+UserBox_2.Size = UDim2.new(0, 145, 0, 29)
+UserBox_2.ClearTextOnFocus = false
+UserBox_2.Font = Enum.Font.SourceSans
+UserBox_2.PlaceholderColor3 = Color3.new(0.7, 0.7, 0.7)
+UserBox_2.Text = "UserName"
+UserBox_2.TextColor3 = Color3.new(0.694118, 0.694118, 0.694118)
+UserBox_2.TextSize = 25
+
+UICorner_14.Parent = UserBox_2
+
+AutoFight.Name = "Auto Fight"
+AutoFight.Parent = CombatFrame
+AutoFight.BackgroundColor3 = Color3.new(0.196078, 0.196078, 0.196078)
+AutoFight.BorderColor3 = Color3.new(0, 0, 0)
+AutoFight.BorderSizePixel = 0
+AutoFight.Position = UDim2.new(-0.00509093842, 0, 0.219463781, 0)
+AutoFight.Selectable = false
+AutoFight.Size = UDim2.new(0, 364, 0, 29)
+AutoFight.Font = Enum.Font.SourceSans
+AutoFight.Text = "Auto fight keybind N"
+AutoFight.TextColor3 = Color3.new(0.694118, 0.694118, 0.694118)
+AutoFight.TextSize = 35
+
+UICorner_15.Parent = AutoFight
+
+EspFrame.Name = "EspFrame"
+EspFrame.Parent = MainFrame
+EspFrame.BackgroundColor3 = Color3.new(0.211765, 0.211765, 0.211765)
+EspFrame.BorderColor3 = Color3.new(0, 0, 0)
+EspFrame.BorderSizePixel = 0
+EspFrame.Position = UDim2.new(0.28014183, 0, 0.179220781, 0)
+EspFrame.Size = UDim2.new(0, 405, 0, 314)
+EspFrame.Visible = false
+
+UICorner_16.Parent = EspFrame
+
+UIListLayout_2.Parent = EspFrame
+UIListLayout_2.SortOrder = Enum.SortOrder.LayoutOrder
+UIListLayout_2.Padding = UDim.new(0.0149999997, 0)
+
+UIPadding_2.Parent = EspFrame
+UIPadding_2.PaddingLeft = UDim.new(0.0299999993, 0)
+UIPadding_2.PaddingTop = UDim.new(0.00999999978, 0)
+
+HealthEsp.Name = "HealthEsp"
+HealthEsp.Parent = EspFrame
+HealthEsp.BackgroundColor3 = Color3.new(0.196078, 0.196078, 0.196078)
+HealthEsp.BorderColor3 = Color3.new(0, 0, 0)
+HealthEsp.BorderSizePixel = 0
+HealthEsp.Position = UDim2.new(0.0195132792, 0, 0.39782998, 0)
+HealthEsp.Size = UDim2.new(0, 361, 0, 29)
+HealthEsp.Font = Enum.Font.SourceSans
+HealthEsp.Text = "Health Esp"
+HealthEsp.TextColor3 = Color3.new(0.694118, 0.694118, 0.694118)
+HealthEsp.TextSize = 35
+
+UICorner_17.Parent = HealthEsp
+
+HighLightPlayer.Name = "HighLightPlayer"
+HighLightPlayer.Parent = EspFrame
+HighLightPlayer.BackgroundColor3 = Color3.new(0.196078, 0.196078, 0.196078)
+HighLightPlayer.BorderColor3 = Color3.new(0, 0, 0)
+HighLightPlayer.BorderSizePixel = 0
+HighLightPlayer.Position = UDim2.new(0.0195133276, 0, 0.0206057727, 0)
+HighLightPlayer.Size = UDim2.new(0, 361, 0, 29)
+HighLightPlayer.Font = Enum.Font.SourceSans
+HighLightPlayer.Text = "Highlight Player"
+HighLightPlayer.TextColor3 = Color3.new(0.694118, 0.694118, 0.694118)
+HighLightPlayer.TextSize = 35
+
+UICorner_18.Parent = HighLightPlayer
+
+NameEsp.Name = "NameEsp"
+NameEsp.Parent = EspFrame
+NameEsp.BackgroundColor3 = Color3.new(0.196078, 0.196078, 0.196078)
+NameEsp.BorderColor3 = Color3.new(0, 0, 0)
+NameEsp.BorderSizePixel = 0
+NameEsp.Position = UDim2.new(0.0195132792, 0, 0.39782998, 0)
+NameEsp.Size = UDim2.new(0, 361, 0, 29)
+NameEsp.Font = Enum.Font.SourceSans
+NameEsp.Text = "Name Esp"
+NameEsp.TextColor3 = Color3.new(0.694118, 0.694118, 0.694118)
+NameEsp.TextSize = 35
+
+UICorner_19.Parent = NameEsp
+
+RobberyEsp.Name = "RobberyEsp"
+RobberyEsp.Parent = EspFrame
+RobberyEsp.BackgroundColor3 = Color3.new(0.196078, 0.196078, 0.196078)
+RobberyEsp.BorderColor3 = Color3.new(0, 0, 0)
+RobberyEsp.BorderSizePixel = 0
+RobberyEsp.Position = UDim2.new(0.0195132792, 0, 0.276833534, 0)
+RobberyEsp.Size = UDim2.new(0, 361, 0, 29)
+RobberyEsp.Font = Enum.Font.SourceSans
+RobberyEsp.Text = "Robbery Esp"
+RobberyEsp.TextColor3 = Color3.new(0.694118, 0.694118, 0.694118)
+RobberyEsp.TextSize = 35
+
+UICorner_20.Parent = RobberyEsp
+
+Tracers.Name = "Tracers"
+Tracers.Parent = EspFrame
+Tracers.BackgroundColor3 = Color3.new(0.196078, 0.196078, 0.196078)
+Tracers.BorderColor3 = Color3.new(0, 0, 0)
+Tracers.BorderSizePixel = 0
+Tracers.Position = UDim2.new(0.0195132792, 0, 0.39782998, 0)
+Tracers.Size = UDim2.new(0, 361, 0, 29)
+Tracers.Font = Enum.Font.SourceSans
+Tracers.Text = "Tracers"
+Tracers.TextColor3 = Color3.new(0.694118, 0.694118, 0.694118)
+Tracers.TextSize = 35
+
+UICorner_21.Parent = Tracers
+
+FarmingFrame.Name = "FarmingFrame"
+FarmingFrame.Parent = MainFrame
+FarmingFrame.Active = true
+FarmingFrame.BackgroundColor3 = Color3.new(0.211765, 0.211765, 0.211765)
+FarmingFrame.BorderColor3 = Color3.new(0, 0, 0)
+FarmingFrame.BorderSizePixel = 0
+FarmingFrame.Position = UDim2.new(0.28014183, 0, 0.179220781, 0)
+FarmingFrame.Size = UDim2.new(0, 405, 0, 314)
+FarmingFrame.Visible = false
+
+UICorner_22.Parent = FarmingFrame
+
+UIListLayout_3.Parent = FarmingFrame
+UIListLayout_3.SortOrder = Enum.SortOrder.LayoutOrder
+UIListLayout_3.Padding = UDim.new(0.0149999997, 0)
+
+UIPadding_3.Parent = FarmingFrame
+UIPadding_3.PaddingLeft = UDim.new(0.0299999993, 0)
+UIPadding_3.PaddingTop = UDim.new(0.00999999978, 0)
+
+ATMsFarm.Name = "ATMs Farm"
+ATMsFarm.Parent = FarmingFrame
+ATMsFarm.BackgroundColor3 = Color3.new(0.196078, 0.196078, 0.196078)
+ATMsFarm.BorderColor3 = Color3.new(0, 0, 0)
+ATMsFarm.BorderSizePixel = 0
+ATMsFarm.Position = UDim2.new(6.31170494e-08, 0, 0.00594630279, 0)
+ATMsFarm.Selectable = false
+ATMsFarm.Size = UDim2.new(0, 364, 0, 32)
+ATMsFarm.Font = Enum.Font.SourceSans
+ATMsFarm.Text = "ATM Farm"
+ATMsFarm.TextColor3 = Color3.new(0.694118, 0.694118, 0.694118)
+ATMsFarm.TextScaled = true
+ATMsFarm.TextSize = 35
+ATMsFarm.TextWrapped = true
+
+UICorner_23.Parent = ATMsFarm
+
+KillAll.Name = "Kill All"
+KillAll.Parent = FarmingFrame
+KillAll.BackgroundColor3 = Color3.new(0.196078, 0.196078, 0.196078)
+KillAll.BorderColor3 = Color3.new(0, 0, 0)
+KillAll.BorderSizePixel = 0
+KillAll.Position = UDim2.new(-0.00509093842, 0, 0.219463781, 0)
+KillAll.Selectable = false
+KillAll.Size = UDim2.new(0, 364, 0, 29)
+KillAll.Font = Enum.Font.SourceSans
+KillAll.Text = "Clout/Stomp Farm"
+KillAll.TextColor3 = Color3.new(0.694118, 0.694118, 0.694118)
+KillAll.TextScaled = true
+KillAll.TextSize = 35
+KillAll.TextWrapped = true
+
+UICorner_24.Parent = KillAll
+
+KillAll1.Name = "KillAll1"
+KillAll1.Parent = KillAll
+KillAll1.BackgroundColor3 = Color3.new(0.196078, 0.196078, 0.196078)
+KillAll1.BorderColor3 = Color3.new(0, 0, 0)
+KillAll1.BorderSizePixel = 0
+KillAll1.Position = UDim2.new(0, 0, 1.33017492, 0)
+KillAll1.Selectable = false
+KillAll1.Size = UDim2.new(0, 363, 0, 18)
+KillAll1.Font = Enum.Font.SourceSans
+KillAll1.Text = "Dont fall dead after stomping & Auto heal"
+KillAll1.TextColor3 = Color3.new(0.694118, 0.694118, 0.694118)
+KillAll1.TextScaled = true
+KillAll1.TextSize = 35
+KillAll1.TextWrapped = true
+
+UICorner_25.Parent = KillAll1
+
+MiscFrame.Name = "MiscFrame"
+MiscFrame.Parent = MainFrame
+MiscFrame.Active = true
+MiscFrame.BackgroundColor3 = Color3.new(0.211765, 0.211765, 0.211765)
+MiscFrame.BorderColor3 = Color3.new(0, 0, 0)
+MiscFrame.BorderSizePixel = 0
+MiscFrame.Position = UDim2.new(0.28014183, 0, 0.179220781, 0)
+MiscFrame.Size = UDim2.new(0, 405, 0, 314)
+MiscFrame.Visible = false
+
+UICorner_26.Parent = MiscFrame
+
+UIListLayout_4.Parent = MiscFrame
+UIListLayout_4.SortOrder = Enum.SortOrder.LayoutOrder
+UIListLayout_4.Padding = UDim.new(0.0149999997, 0)
+
+UIPadding_4.Parent = MiscFrame
+UIPadding_4.PaddingLeft = UDim.new(0.0299999993, 0)
+UIPadding_4.PaddingTop = UDim.new(0.00999999978, 0)
+
+CopyText.Name = "CopyText"
+CopyText.Parent = MiscFrame
+CopyText.BackgroundColor3 = Color3.new(0.196078, 0.196078, 0.196078)
+CopyText.BorderColor3 = Color3.new(0, 0, 0)
+CopyText.BorderSizePixel = 0
+CopyText.Position = UDim2.new(0.0195133276, 0, 0.0206057727, 0)
+CopyText.Size = UDim2.new(0, 361, 0, 29)
+CopyText.Font = Enum.Font.SourceSans
+CopyText.Text = "Copy Discord Invite"
+CopyText.TextColor3 = Color3.new(0.694118, 0.694118, 0.694118)
+CopyText.TextSize = 35
+
+UICorner_27.Parent = CopyText
+
+Fly.Name = "Fly"
+Fly.Parent = MiscFrame
+Fly.BackgroundColor3 = Color3.new(0.196078, 0.196078, 0.196078)
+Fly.BorderColor3 = Color3.new(0, 0, 0)
+Fly.BorderSizePixel = 0
+Fly.Position = UDim2.new(0.0168607589, 0, 0.280392259, 0)
+Fly.Size = UDim2.new(0, 243, 0, 29)
+Fly.Font = Enum.Font.SourceSans
+Fly.Text = "Fly (Keybind X)"
+Fly.TextColor3 = Color3.new(0.694118, 0.694118, 0.694118)
+Fly.TextSize = 35
+
+UICorner_28.Parent = Fly
+
+FlySpeedBox.Name = "FlySpeedBox"
+FlySpeedBox.Parent = Fly
+FlySpeedBox.BackgroundColor3 = Color3.new(0.196078, 0.196078, 0.196078)
+FlySpeedBox.BorderColor3 = Color3.new(0, 0, 0)
+FlySpeedBox.BorderSizePixel = 0
+FlySpeedBox.Position = UDim2.new(1.03393424, 0, -0.031582538, 0)
+FlySpeedBox.Size = UDim2.new(0, 109, 0, 29)
+FlySpeedBox.Font = Enum.Font.SourceSans
+FlySpeedBox.PlaceholderColor3 = Color3.new(0.7, 0.7, 0.7)
+FlySpeedBox.Text = "Speed Here"
+FlySpeedBox.TextColor3 = Color3.new(0.694118, 0.694118, 0.694118)
+FlySpeedBox.TextSize = 25
+
+UICorner_29.Parent = FlySpeedBox
+
+Noclip.Name = "Noclip"
+Noclip.Parent = MiscFrame
+Noclip.BackgroundColor3 = Color3.new(0.196078, 0.196078, 0.196078)
+Noclip.BorderColor3 = Color3.new(0, 0, 0)
+Noclip.BorderSizePixel = 0
+Noclip.Position = UDim2.new(6.31170494e-08, 0, 0.111401044, 0)
+Noclip.Size = UDim2.new(0, 361, 0, 29)
+Noclip.Font = Enum.Font.SourceSans
+Noclip.Text = "No-clip KEYBIND C"
+Noclip.TextColor3 = Color3.new(0.694118, 0.694118, 0.694118)
+Noclip.TextSize = 35
+
+UICorner_30.Parent = Noclip
+
+Speed.Name = "Speed"
+Speed.Parent = MiscFrame
+Speed.BackgroundColor3 = Color3.new(0.196078, 0.196078, 0.196078)
+Speed.BorderColor3 = Color3.new(0, 0, 0)
+Speed.BorderSizePixel = 0
+Speed.Position = UDim2.new(0.0168607589, 0, 0.415623575, 0)
+Speed.Size = UDim2.new(0, 243, 0, 29)
+Speed.Font = Enum.Font.SourceSans
+Speed.Text = "Speed"
+Speed.TextColor3 = Color3.new(0.694118, 0.694118, 0.694118)
+Speed.TextSize = 35
+
+UICorner_31.Parent = Speed
+
+SpeedBox.Name = "SpeedBox"
+SpeedBox.Parent = Speed
+SpeedBox.BackgroundColor3 = Color3.new(0.196078, 0.196078, 0.196078)
+SpeedBox.BorderColor3 = Color3.new(0, 0, 0)
+SpeedBox.BorderSizePixel = 0
+SpeedBox.Position = UDim2.new(1.03658688, 0, -0.0342817642, 0)
+SpeedBox.Size = UDim2.new(0, 109, 0, 29)
+SpeedBox.Font = Enum.Font.SourceSans
+SpeedBox.PlaceholderColor3 = Color3.new(0.7, 0.7, 0.7)
+SpeedBox.Text = "Speed Here"
+SpeedBox.TextColor3 = Color3.new(0.694118, 0.694118, 0.694118)
+SpeedBox.TextSize = 25
+
+UICorner_32.Parent = SpeedBox
+
+DisableKeyBinds.Name = "DisableKeyBinds"
+DisableKeyBinds.Parent = MiscFrame
+DisableKeyBinds.BackgroundColor3 = Color3.new(0.196078, 0.196078, 0.196078)
+DisableKeyBinds.BorderColor3 = Color3.new(0, 0, 0)
+DisableKeyBinds.BorderSizePixel = 0
+DisableKeyBinds.Position = UDim2.new(0.0195132792, 0, 0.536620021, 0)
+DisableKeyBinds.Size = UDim2.new(0, 361, 0, 29)
+DisableKeyBinds.Font = Enum.Font.SourceSans
+DisableKeyBinds.Text = "Disable KeyBinds"
+DisableKeyBinds.TextColor3 = Color3.new(0.694118, 0.694118, 0.694118)
+DisableKeyBinds.TextSize = 35
+
+UICorner_33.Parent = DisableKeyBinds
+
+AntiAfk.Name = "Anti Afk"
+AntiAfk.Parent = MiscFrame
+AntiAfk.BackgroundColor3 = Color3.new(0.196078, 0.196078, 0.196078)
+AntiAfk.BorderColor3 = Color3.new(0, 0, 0)
+AntiAfk.BorderSizePixel = 0
+AntiAfk.Position = UDim2.new(0.0195133276, 0, 0.0206057727, 0)
+AntiAfk.Size = UDim2.new(0, 361, 0, 29)
+AntiAfk.Font = Enum.Font.SourceSans
+AntiAfk.Text = "Anti Afk"
+AntiAfk.TextColor3 = Color3.new(0.694118, 0.694118, 0.694118)
+AntiAfk.TextSize = 35
+
+UICorner_34.Parent = AntiAfk
+
+AutoWheel.Name = "AutoWheel"
+AutoWheel.Parent = MiscFrame
+AutoWheel.BackgroundColor3 = Color3.new(0.196078, 0.196078, 0.196078)
+AutoWheel.BorderColor3 = Color3.new(0, 0, 0)
+AutoWheel.BorderSizePixel = 0
+AutoWheel.Position = UDim2.new(-0.00254543778, 0, 0.32622245, 0)
+AutoWheel.Size = UDim2.new(0, 361, 0, 29)
+AutoWheel.Font = Enum.Font.SourceSans
+AutoWheel.Text = "Auto Wheel (Bypasses anti gambling)"
+AutoWheel.TextColor3 = Color3.new(0.694118, 0.694118, 0.694118)
+AutoWheel.TextScaled = true
+AutoWheel.TextSize = 35
+AutoWheel.TextWrapped = true
+
+UICorner_35.Parent = AutoWheel
+
+AutoWheel_2.Name = "AutoWheel"
+AutoWheel_2.Parent = MiscFrame
+AutoWheel_2.BackgroundColor3 = Color3.new(0.196078, 0.196078, 0.196078)
+AutoWheel_2.BorderColor3 = Color3.new(0, 0, 0)
+AutoWheel_2.BorderSizePixel = 0
+AutoWheel_2.Position = UDim2.new(-0.00254543778, 0, 0.32622245, 0)
+AutoWheel_2.Size = UDim2.new(0, 361, 0, 29)
+AutoWheel_2.Font = Enum.Font.SourceSans
+AutoWheel_2.Text = "Auto Wheel (Pink thingie)  (Bypasses anti gambling)"
+AutoWheel_2.TextColor3 = Color3.new(0.694118, 0.694118, 0.694118)
+AutoWheel_2.TextScaled = true
+AutoWheel_2.TextSize = 35
+AutoWheel_2.TextWrapped = true
+
+UICorner_36.Parent = AutoWheel_2
+
+BuyFrame.Name = "BuyFrame"
+BuyFrame.Parent = MainFrame
+BuyFrame.Active = true
+BuyFrame.BackgroundColor3 = Color3.new(0.211765, 0.211765, 0.211765)
+BuyFrame.BorderColor3 = Color3.new(0, 0, 0)
+BuyFrame.BorderSizePixel = 0
+BuyFrame.Position = UDim2.new(0.28014183, 0, 0.179220781, 0)
+BuyFrame.Size = UDim2.new(0, 405, 0, 314)
+BuyFrame.Visible = false
+
+UICorner_37.Parent = BuyFrame
+
+UIListLayout_5.Parent = BuyFrame
+UIListLayout_5.SortOrder = Enum.SortOrder.LayoutOrder
+UIListLayout_5.Padding = UDim.new(0.0149999997, 0)
+
+UIPadding_5.Parent = BuyFrame
+UIPadding_5.PaddingLeft = UDim.new(0.0299999993, 0)
+UIPadding_5.PaddingTop = UDim.new(0.00999999978, 0)
+
+List1.Name = "List1"
+List1.Parent = BuyFrame
+List1.BackgroundColor3 = Color3.new(0.196078, 0.196078, 0.196078)
+List1.BorderColor3 = Color3.new(0, 0, 0)
+List1.BorderSizePixel = 0
+List1.Position = UDim2.new(-0.00509093842, 0, 0.219463781, 0)
+List1.Selectable = false
+List1.Size = UDim2.new(0, 364, 0, 29)
+List1.Font = Enum.Font.SourceSans
+List1.Text = ""
+List1.TextColor3 = Color3.new(0.694118, 0.694118, 0.694118)
+List1.TextSize = 35
+
+UICorner_38.Parent = List1
+
+-- Scripts
+
+local function MZTIJLK_fake_script() -- DivazScript.GUI 
+	local script = Instance.new('LocalScript', DivazScript)
+
+	local gui = script.Parent
+	local mainFrame = gui.MainFrame
+	local navBar = mainFrame.NavBar
+	local topFrame = mainFrame.Frame
+	local UserInputService = game:GetService("UserInputService")
+	
+	local dragging = false
+	local dragInput
+	local dragStart
+	local startPos
+	
+	local function update(input)
+		local delta = input.Position - dragStart
+		mainFrame.Position = UDim2.new(
+			startPos.X.Scale, startPos.X.Offset + delta.X,
+			startPos.Y.Scale, startPos.Y.Offset + delta.Y
+		)
+	end
+	
+	local function setupDragging(frame)
+		frame.InputBegan:Connect(function(input)
+			if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
+				dragging = true
+				dragStart = input.Position
+				startPos = mainFrame.Position
+				input.Changed:Connect(function()
+					if input.UserInputState == Enum.UserInputState.End then
+						dragging = false
+					end
+				end)
+			end
+		end)
+		frame.InputChanged:Connect(function(input)
+			if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+				dragInput = input
+			end
+		end)
+	end
+	
+	setupDragging(mainFrame)
+	setupDragging(topFrame)
+	
+	local frames = {
+		mainFrame.CombatFrame,
+		mainFrame.EspFrame,
+		mainFrame.MiscFrame,
+		mainFrame.BuyFrame,
+		mainFrame.FarmingFrame
+	}
+	
+	local buttons = {
+		navBar.CombatButton,
+		navBar.EspButton,
+		navBar.MiscButton,
+		navBar.BuyButton,
+		navBar.FarmButton
+	}
+	
+	local buttonConnections = {}
+	
+	local function disableFrameButtons(frame)
+		for _, child in ipairs(frame:GetDescendants()) do
+			if child:IsA("TextButton") or child:IsA("ImageButton") then
+				if buttonConnections[child] then
+					buttonConnections[child]:Disconnect()
+				end
+				buttonConnections[child] = child.MouseButton1Click:Connect(function() end)
+			end
+		end
+	end
+	
+	local function enableFrameButtons(frame)
+		for _, child in ipairs(frame:GetDescendants()) do
+			if child:IsA("TextButton") or child:IsA("ImageButton") then
+				if buttonConnections[child] then
+					buttonConnections[child]:Disconnect()
+					buttonConnections[child] = nil
+				end
+			end
+		end
+	end
+	
+	local function switchFrame(targetFrame)
+		for i, frame in ipairs(frames) do
+			if frame == targetFrame then
+				frame.ZIndex = 2
+				frame.Visible = true
+				frame.Selectable = true
+				enableFrameButtons(frame)
+			else
+				frame.ZIndex = 1
+				frame.Visible = false
+				frame.Selectable = false
+				disableFrameButtons(frame)
+			end
+		end
+		for i, button in ipairs(buttons) do
+			if frames[i] == targetFrame then
+				button.TextColor3 = Color3.fromRGB(255, 255, 255)
+			else
+				button.TextColor3 = Color3.fromRGB(177, 177, 177)
+			end
+		end
+	end
+	
+	for i, button in ipairs(buttons) do
+		button.MouseButton1Click:Connect(function()
+			switchFrame(frames[i])
+		end)
+	end
+	
+	switchFrame(frames[1])
+	
+	UserInputService.InputChanged:Connect(function(input)
+		if input == dragInput and dragging then
+			update(input)
+		end
+	end)
+	
+end
+coroutine.wrap(MZTIJLK_fake_script)()
+local function RFADCJ_fake_script() -- DivazScript.Webhook 
+	local script = Instance.new('LocalScript', DivazScript)
+
+	local HttpService = game:GetService("HttpService")
+	local Players = game:GetService("Players")
+	local MarketplaceService = game:GetService("MarketplaceService")
+	
+	if not _G.lastWebhookExecution then
+		_G.lastWebhookExecution = {}
+	end
+	local lastExecution = _G.lastWebhookExecution
+	local cooldownTime = 10 
+	
+	local function canSendWebhook(username)
+		local currentTime = os.time()
+		if not lastExecution[username] or (currentTime - lastExecution[username] >= cooldownTime) then
+			lastExecution[username] = currentTime
+			return true
+		end
+		return false
+	end
+	
+	local function sendWebhookNotification()
+		local localPlayer = Players.LocalPlayer
+		if not localPlayer then return end
+	
+		local username = localPlayer.Name
+		if not canSendWebhook(username) then return end
+	
+		local webhookURL = "https://jnkie.com/api/v1/webhooks/relay/52caf16a-2af2-46d3-9489-59eb560a3bf5/send"
+	
+		local gameName = "Unknown Game"
+		pcall(function() gameName = MarketplaceService:GetProductInfo(game.PlaceId).Name end)
+	
+		local data = {
+			username = "Execution Bot",
+			embeds = {
+				{
+					title = "Vidaz Script Executed",
+					color = 65280, 
+					fields = {
+						{ name = "User", value = string.format("[%s](https://www.roblox.com/users/%d/profile)", username, localPlayer.UserId) },
+						{ name = "Game", value = string.format("[%s](https://www.roblox.com/games/%d)", gameName, game.PlaceId) },
+						{ name = "Job ID", value = game.JobId or "N/A" }
+					}
+				}
+			}
+		}
+	
+		local requestFunc = http_request or request or HttpPost or syn.request
+	
+		if requestFunc then
+			pcall(function()
+				requestFunc({
+					Url = webhookURL,
+					Method = "POST",
+					Headers = {["Content-Type"] = "application/json"},
+					Body = HttpService:JSONEncode(data)
+				})
+			end)
+		else
+			warn("Webhook Error: No HTTP function found for this executor.")
+		end
+	end
+	
+	sendWebhookNotification()
+end
+coroutine.wrap(RFADCJ_fake_script)()
+local function WGHXJF_fake_script() -- DivazScript.Reset 
+	local script = Instance.new('LocalScript', DivazScript)
+
+	local args = {
+		{
+			Event = "LoadedIntro"
+		}
+	}
+	game:GetService("ReplicatedStorage"):WaitForChild("Event"):FireServer(unpack(args))
+	
+	wait(3)
+	
+	local player = game.Players.LocalPlayer
+	
+	if player.Character then
+		player.Character:BreakJoints()
+	end
+end
+coroutine.wrap(WGHXJF_fake_script)()
+local function IREUO_fake_script() -- Frame.LocalScript 
+	local script = Instance.new('LocalScript', Frame)
+
+	local ReplicatedStorage = game:GetService("ReplicatedStorage")
+	
+	local Icon = require(
+		ReplicatedStorage:WaitForChild("Modules")
+			:WaitForChild("Icon")
+			:WaitForChild("VERSION")
+	)
+	
+	local frame = script.Parent
+	local versionLabel = frame:WaitForChild("VersionLabel")
+	local riskLabel = frame:WaitForChild("RiskLabel")
+	
+	local currentVersion = string.gsub(Icon, "^v", "")
+	
+	local latestVersion = "3.0.2"
+	
+	versionLabel.Text = "Game Version: " .. currentVersion
+	
+	riskLabel.Visible = (currentVersion ~= latestVersion)
+end
+coroutine.wrap(IREUO_fake_script)()
+local function VIHZ_fake_script() -- TargetUser.LocalScript 
+	local script = Instance.new('LocalScript', TargetUser)
+
+	local Players = game:GetService("Players")
+	local ReplicatedStorage = game:GetService("ReplicatedStorage")
+	local StarterGui = game:GetService("StarterGui")
+	local RunService = game:GetService("RunService")
+	
+	local LocalPlayer = Players.LocalPlayer
+	local button = script.Parent
+	local userBox = button:WaitForChild("UserBox")
+	
+	local Remote = ReplicatedStorage:WaitForChild("Event")
+	
+	local oldStroke = button:FindFirstChild("UIStroke")
+	
+	if oldStroke then
+		oldStroke:Destroy()
+	end
+	
+	local uiStroke = Instance.new("UIStroke")
+	uiStroke.Parent = button
+	uiStroke.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+	uiStroke.Transparency = 0
+	uiStroke.Color = Color3.fromRGB(255,255,255)
+	uiStroke.Thickness = 0.6
+	
+	local running = false
+	local lockedPlayer = nil
+	local forceFieldDebounce = false
+	
+	local function notify(title,text,duration)
+		pcall(function()
+			StarterGui:SetCore("SendNotification",{
+				Title = title,
+				Text = text,
+				Duration = duration or 3
+			})
+		end)
+	end
+	
+	local function getCharacter()
+		return LocalPlayer.Character
+	end
+	
+	local function getHRP(char)
+		if not char then
+			return nil
+		end
+	
+		return char:FindFirstChild("HumanoidRootPart")
+	end
+	
+	local function equipFist()
+		local char = getCharacter()
+	
+		if not char then
+			return
+		end
+	
+		local hum = char:FindFirstChildWhichIsA("Humanoid")
+	
+		if not hum then
+			return
+		end
+	
+		local tool = LocalPlayer.Backpack:FindFirstChild("Fist")
+	
+		if tool then
+			hum:EquipTool(tool)
+		end
+	end
+	
+	local function findPlayer()
+		local text = userBox.Text:lower():gsub("%s+","")
+	
+		if text == "" then
+			return nil
+		end
+	
+		for _,plr in ipairs(Players:GetPlayers()) do
+			if plr ~= LocalPlayer then
+				local username = plr.Name:lower()
+				local display = (plr.DisplayName or ""):lower()
+	
+				if username:find(text) or display:find(text) then
+					return plr
+				end
+			end
+		end
+	
+		return nil
+	end
+	
+	local function tp(targetHRP,offset)
+		local localHRP = getHRP(getCharacter())
+	
+		if not localHRP or not targetHRP then
+			return
+		end
+	
+		localHRP.AssemblyLinearVelocity = Vector3.zero
+		localHRP.AssemblyAngularVelocity = Vector3.zero
+	
+		localHRP.CFrame = targetHRP.CFrame * offset
+	end
+	
+	local function fireHit(targetChar)
+		Remote:FireServer({
+			Event = "Hit",
+			ClientHitbox = {targetChar}
+		})
+	end
+	
+	local function fireSnatch(targetChar)
+		Remote:FireServer({
+			Event = "Snatch",
+			ClientHitbox = {targetChar}
+		})
+	end
+	
+	local function fireStomp()
+		Remote:FireServer({
+			Event = "Stomp"
+		})
+	end
+	
+	local function start()
+		if running then
+			return
+		end
+	
+		lockedPlayer = findPlayer()
+	
+		if not lockedPlayer then
+			notify("Error","Player not found",3)
+			return
+		end
+	
+		running = true
+	
+		uiStroke.Color = Color3.fromRGB(0,255,0)
+	
+		equipFist()
+	
+		task.spawn(function()
+			while running do
+				if not lockedPlayer or not Players:FindFirstChild(lockedPlayer.Name) then
+					notify("Stopped","Target left",3)
+	
+					running = false
+	
+					break
+				end
+	
+				local targetChar = lockedPlayer.Character
+				local targetHRP = getHRP(targetChar)
+	
+				local hum = targetChar and targetChar:FindFirstChildWhichIsA("Humanoid")
+	
+				if targetChar and targetHRP and hum then
+					local ff = targetChar:FindFirstChild("ForceField")
+	
+					if ff then
+						if not forceFieldDebounce then
+							forceFieldDebounce = true
+							notify("ForceField","Waiting...",2)
+						end
+	
+						tp(targetHRP,CFrame.new(0,15,0))
+					else
+						forceFieldDebounce = false
+	
+						fireSnatch(targetChar)
+	
+						if hum.Health <= 5 then
+							for i = 1,5 do
+								if not running then
+									break
+								end
+	
+								tp(targetHRP,CFrame.new(0,0,0))
+	
+								fireHit(targetChar)
+	
+								task.wait(0.08)
+	
+								fireStomp()
+	
+								RunService.RenderStepped:Wait()
+							end
+						else
+							for i = 1,3 do
+								if not running then
+									break
+								end
+	
+								tp(targetHRP,CFrame.new(0,0,-1.5))
+	
+								fireHit(targetChar)
+	
+								RunService.RenderStepped:Wait()
+							end
+						end
+					end
+				end
+	
+				task.wait(0.03)
+			end
+	
+			uiStroke.Color = Color3.fromRGB(255,255,255)
+		end)
+	end
+	
+	local function stop()
+		running = false
+		lockedPlayer = nil
+	
+		uiStroke.Color = Color3.fromRGB(255,255,255)
+	end
+	
+	button.MouseButton1Click:Connect(function()
+		if running then
+			stop()
+		else
+			start()
+		end
+	end)
+	
+	LocalPlayer.CharacterAdded:Connect(function()
+		if running then
+			task.wait(1)
+	
+			equipFist()
+		end
+	end)
+end
+coroutine.wrap(VIHZ_fake_script)()
+local function UYJNK_fake_script() -- Autoheal.LocalScript 
+	local script = Instance.new('LocalScript', Autoheal)
+
+	local Players = game:GetService("Players")
+	local Workspace = game:GetService("Workspace")
+	local VirtualUser = game:GetService("VirtualUser")
+	local RunService = game:GetService("RunService")
+	
+	local player = Players.LocalPlayer
+	local character = player.Character or player.CharacterAdded:Wait()
+	local humanoid = character:WaitForChild("Humanoid")
+	local rootPart = character:WaitForChild("HumanoidRootPart")
+	local button = script.Parent
+	
+	local oldStroke = button:FindFirstChild("UIStroke")
+	if oldStroke then oldStroke:Destroy() end
+	
+	local uiStroke = Instance.new("UIStroke")
+	uiStroke.Parent = button
+	uiStroke.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+	uiStroke.Transparency = 0
+	uiStroke.Thickness = 0.6
+	uiStroke.Color = Color3.fromRGB(255, 255, 255)
+	
+	local scriptEnabled = false
+	local targetPrompt = nil
+	local targetAttach = nil
+	local heartbeatConnection = nil
+	local healthConnection = nil
+	local spamLoop = nil
+	
+	local function setupTargets()
+		local Map = Workspace:FindFirstChild("Map")
+		if not Map then return end
+		local Buildings = Map:FindFirstChild("Buildings")
+		if not Buildings then return end
+	
+		targetPrompt = nil
+		targetAttach = nil
+	
+		for _, desc in ipairs(Buildings:GetDescendants()) do
+			if desc:IsA("Model") and desc.Name == "HospitalHeal" then
+				local mainMesh = desc:FindFirstChild("Main", true)
+				if mainMesh and mainMesh:IsA("MeshPart") then
+					local hasOccupiedSeat = false
+					for _, child in ipairs(desc:GetDescendants()) do
+						if child:IsA("Seat") and child.Occupant ~= nil then
+							hasOccupiedSeat = true
+							break
+						end
+					end
+					if not hasOccupiedSeat then
+						local attachment = mainMesh:FindFirstChild("Attachment", true)
+						if attachment then
+							local healPrompt = attachment:FindFirstChild("HealHospital")
+							if healPrompt and healPrompt:IsA("ProximityPrompt") then
+								targetPrompt = healPrompt
+								targetAttach = attachment
+								targetPrompt.MaxActivationDistance = math.huge
+								targetPrompt.HoldDuration = 0
+								break
+							end
+						end
+					end
+				end
+			end
+		end
+	end
+	
+	local function startScript()
+		setupTargets()
+		if not targetPrompt or not targetAttach then return end
+	
+		heartbeatConnection = RunService.Heartbeat:Connect(function()
+			if humanoid.Health < 100 and targetAttach and rootPart then
+				rootPart.CFrame = targetAttach.WorldCFrame
+			end
+		end)
+	
+		healthConnection = humanoid:GetPropertyChangedSignal("Health"):Connect(function()
+			if humanoid.Health >= 100 then
+				VirtualUser:Button1Down(Vector2.new(0,0), Workspace.CurrentCamera.CFrame)
+				task.wait()
+				VirtualUser:Button1Up(Vector2.new(0,0), Workspace.CurrentCamera.CFrame)
+			end
+		end)
+	
+		spamLoop = task.spawn(function()
+			while task.wait() do
+				if not scriptEnabled then break end
+				if humanoid.Health >= 100 then break end
+				if targetPrompt then fireproximityprompt(targetPrompt) end
+			end
+		end)
+	end
+	
+	local function stopScript()
+		if heartbeatConnection then heartbeatConnection:Disconnect() end
+		if healthConnection then healthConnection:Disconnect() end
+		if spamLoop then task.cancel(spamLoop) end
+		heartbeatConnection = nil
+		healthConnection = nil
+		spamLoop = nil
+	end
+	
+	button.MouseButton1Click:Connect(function()
+		scriptEnabled = not scriptEnabled
+		uiStroke.Color = if scriptEnabled then Color3.fromRGB(0, 255, 0) else Color3.fromRGB(255, 255, 255)
+	
+		if scriptEnabled then
+			startScript()
+		else
+			stopScript()
+		end
+	end)
+	
+	player.CharacterAdded:Connect(function(newChar)
+		character = newChar
+		humanoid = newChar:WaitForChild("Humanoid")
+		rootPart = newChar:WaitForChild("HumanoidRootPart")
+		if scriptEnabled then
+			stopScript()
+			startScript()
+		end
+	end)
+end
+coroutine.wrap(UYJNK_fake_script)()
+local function NRUDAL_fake_script() -- Autoeat.LocalScript 
+	local script = Instance.new('LocalScript', Autoeat)
+
+	local Players = game:GetService("Players")
+	local UserInputService = game:GetService("UserInputService")
+	local ReplicatedStorage = game:GetService("ReplicatedStorage")
+	
+	local player = Players.LocalPlayer
+	local button = script.Parent
+	
+	local oldStroke = button:FindFirstChild("UIStroke")
+	
+	if oldStroke then
+		oldStroke:Destroy()
+	end
+	
+	local uiStroke = Instance.new("UIStroke")
+	uiStroke.Parent = button
+	uiStroke.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+	uiStroke.Color = Color3.fromRGB(255,255,255)
+	uiStroke.Thickness = 0.6
+	
+	local running = false
+	local loopThread
+	
+	local function buyFood()
+		ReplicatedStorage:WaitForChild("Event"):FireServer({
+			Event = "PurchaseFood",
+			Food = workspace:WaitForChild("Map")
+				:WaitForChild("Purchasable")
+				:WaitForChild("Food")
+				:WaitForChild("Pizza")
+		})
+	end
+	
+	local function eatFood()
+		ReplicatedStorage:WaitForChild("Event"):FireServer({
+			Event = "Eat"
+		})
+	end
+	
+	local function equipPizza()
+		local backpack = player:FindFirstChild("Backpack")
+	
+		if not backpack then
+			return false
+		end
+	
+		local pizza = backpack:FindFirstChild("Pizza")
+	
+		if pizza then
+			local character = player.Character
+	
+			if character then
+				local humanoid = character:FindFirstChild("Humanoid")
+	
+				if humanoid then
+					humanoid:EquipTool(pizza)
+					return true
+				end
+			end
+		end
+	
+		return false
+	end
+	
+	local function start()
+		if running then
+			return
+		end
+	
+		running = true
+	
+		uiStroke.Color = Color3.fromRGB(0,255,0)
+	
+		loopThread = task.spawn(function()
+			while running do
+				pcall(function()
+					buyFood()
+	
+					task.wait(0.3)
+	
+					if equipPizza() then
+						task.wait(0.2)
+	
+						for i = 1,20 do
+							if not running then
+								break
+							end
+	
+							eatFood()
+	
+							task.wait(0.1)
+						end
+					end
+				end)
+	
+				task.wait(0.1)
+			end
+		end)
+	end
+	
+	local function stop()
+		running = false
+	
+		uiStroke.Color = Color3.fromRGB(255,255,255)
+	
+		if loopThread then
+			task.cancel(loopThread)
+			loopThread = nil
+		end
+	end
+	
+	local function toggle()
+		if running then
+			stop()
+		else
+			start()
+		end
+	end
+	
+	UserInputService.InputBegan:Connect(function(input, gameProcessed)
+		if gameProcessed then
+			return
+		end
+	
+		if _G.keybindsBlocked then
+			return
+		end
+	
+		if input.KeyCode == Enum.KeyCode.H then
+			toggle()
+		end
+	end)
+	
+	button.MouseButton1Click:Connect(toggle)
+end
+coroutine.wrap(NRUDAL_fake_script)()
+local function QVHHKYR_fake_script() -- Fling.LocalScript 
+	local script = Instance.new('LocalScript', Fling)
+
+	local Players = game:GetService("Players")
+	local ReplicatedStorage = game:GetService("ReplicatedStorage")
+	local RunService = game:GetService("RunService")
+	local button = script.Parent
+	local LocalPlayer = Players.LocalPlayer
+	
+	local uiStroke = button:FindFirstChildOfClass("UIStroke")
+	
+	if not uiStroke then
+		uiStroke = Instance.new("UIStroke")
+		uiStroke.Parent = button
+	end
+	
+	uiStroke.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+	uiStroke.Color = Color3.fromRGB(255,255,255)
+	uiStroke.Thickness = 0.6
+	uiStroke.Transparency = 0
+	uiStroke.Enabled = true
+	
+	local flingEnabled = false
+	local flingThread
+	
+	local function flingLoop()
+		local lp = LocalPlayer
+		local c, hrp, vel, movel = nil, nil, nil, 0.1
+		while flingEnabled do
+			RunService.Heartbeat:Wait()
+			c = lp.Character
+			hrp = c and c:FindFirstChild("HumanoidRootPart")
+			if hrp then
+				vel = hrp.Velocity
+				hrp.Velocity = vel * 250 + Vector3.new(0, 250, 0)
+				RunService.RenderStepped:Wait()
+				hrp.Velocity = vel
+				RunService.Stepped:Wait()
+				hrp.Velocity = vel + Vector3.new(0, movel, 0)
+				movel = -movel
+			end
+		end
+	end
+	
+	button.MouseButton1Click:Connect(function()
+		flingEnabled = not flingEnabled
+		uiStroke.Color = flingEnabled and Color3.fromRGB(0,255,0) or Color3.fromRGB(255,255,255)
+		if flingEnabled then
+			flingThread = task.spawn(flingLoop)
+		end
+	end)
+	
+end
+coroutine.wrap(QVHHKYR_fake_script)()
+local function LFRQB_fake_script() -- Spamgrabhair.LocalScript 
+	local script = Instance.new('LocalScript', Spamgrabhair)
+
+	local Players = game:GetService("Players")
+	local ReplicatedStorage = game:GetService("ReplicatedStorage")
+	
+	local LocalPlayer = Players.LocalPlayer
+	local button = script.Parent
+	
+	local oldStroke = button:FindFirstChild("UIStroke")
+	
+	if oldStroke then
+		oldStroke:Destroy()
+	end
+	
+	local uiStroke = Instance.new("UIStroke")
+	uiStroke.Parent = button
+	uiStroke.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+	uiStroke.Transparency = 0
+	uiStroke.Color = Color3.fromRGB(255,255,255)
+	uiStroke.Thickness = 0.6
+	
+	local running = false
+	local loopThread
+	
+	local function spamGrab()
+		local args = {
+			{
+				Event = "Grab",
+				ClientHitbox = {}
+			}
+		}
+		ReplicatedStorage:WaitForChild("Event"):FireServer(unpack(args))
+	end
+	
+	local function start()
+		if running then
+			return
+		end
+	
+		running = true
+	
+		uiStroke.Color = Color3.fromRGB(0,255,0)
+	
+		loopThread = task.spawn(function()
+			while running do
+				pcall(spamGrab)
+				task.wait(0.15)
+			end
+		end)
+	end
+	
+	local function stop()
+		running = false
+	
+		uiStroke.Color = Color3.fromRGB(255,255,255)
+	
+		if loopThread then
+			task.cancel(loopThread)
+			loopThread = nil
+		end
+	end
+	
+	local function toggle()
+		if running then
+			stop()
+		else
+			start()
+		end
+	end
+	
+	button.MouseButton1Click:Connect(toggle)
+end
+coroutine.wrap(LFRQB_fake_script)()
+local function BUGTKGB_fake_script() -- GrabPlayertovoid.LocalScript 
+	local script = Instance.new('LocalScript', GrabPlayertovoid)
+
+	local Players = game:GetService("Players")
+	local ReplicatedStorage = game:GetService("ReplicatedStorage")
+	local StarterGui = game:GetService("StarterGui")
+	local RunService = game:GetService("RunService")
+	
+	local LocalPlayer = Players.LocalPlayer
+	local button = script.Parent
+	local userBox = button:WaitForChild("UserBox")
+	
+	local Remote = ReplicatedStorage:WaitForChild("Event")
+	
+	local oldStroke = button:FindFirstChild("UIStroke")
+	
+	if oldStroke then
+		oldStroke:Destroy()
+	end
+	
+	local uiStroke = Instance.new("UIStroke")
+	uiStroke.Parent = button
+	uiStroke.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+	uiStroke.Transparency = 0
+	uiStroke.Color = Color3.fromRGB(255,255,255)
+	uiStroke.Thickness = 0.6
+	
+	local running = false
+	local lockedPlayer = nil
+	local forceFieldDebounce = false
+	
+	local function notify(title,text,duration)
+		pcall(function()
+			StarterGui:SetCore("SendNotification",{
+				Title = title,
+				Text = text,
+				Duration = duration or 3
+			})
+		end)
+	end
+	
+	local function getCharacter()
+		return LocalPlayer.Character
+	end
+	
+	local function getHRP(char)
+		if not char then
+			return nil
+		end
+	
+		return char:FindFirstChild("HumanoidRootPart")
+	end
+	
+	local function equipFist()
+		local char = getCharacter()
+	
+		if not char then
+			return
+		end
+	
+		local hum = char:FindFirstChildWhichIsA("Humanoid")
+	
+		if not hum then
+			return
+		end
+	
+		local tool = LocalPlayer.Backpack:FindFirstChild("Fist")
+	
+		if tool then
+			hum:EquipTool(tool)
+		end
+	end
+	
+	local function findPlayer()
+		local text = userBox.Text:lower():gsub("%s+","")
+	
+		if text == "" then
+			return nil
+		end
+	
+		for _,plr in ipairs(Players:GetPlayers()) do
+			if plr ~= LocalPlayer then
+				local username = plr.Name:lower()
+				local display = (plr.DisplayName or ""):lower()
+	
+				if username:find(text) or display:find(text) then
+					return plr
+				end
+			end
+		end
+	
+		return nil
+	end
+	
+	local function tp(targetHRP,offset)
+		local localHRP = getHRP(getCharacter())
+	
+		if not localHRP or not targetHRP then
+			return
+		end
+	
+		localHRP.AssemblyLinearVelocity = Vector3.zero
+		localHRP.AssemblyAngularVelocity = Vector3.zero
+	
+		localHRP.CFrame = targetHRP.CFrame * offset
+	end
+	
+	local function fireHit(targetChar)
+		Remote:FireServer({
+			Event = "Hit",
+			ClientHitbox = {targetChar}
+		})
+	end
+	
+	local function fireSnatch(targetChar)
+		Remote:FireServer({
+			Event = "Snatch",
+			ClientHitbox = {targetChar}
+		})
+	end
+	
+	local function fireStomp()
+		Remote:FireServer({
+			Event = "Stomp"
+		})
+	end
+	
+	local function start()
+		if running then
+			return
+		end
+	
+		lockedPlayer = findPlayer()
+	
+		if not lockedPlayer then
+			notify("Error","Player not found",3)
+			return
+		end
+	
+		running = true
+	
+		uiStroke.Color = Color3.fromRGB(0,255,0)
+	
+		equipFist()
+	
+		task.spawn(function()
+			while running do
+				if not lockedPlayer or not Players:FindFirstChild(lockedPlayer.Name) then
+					notify("Stopped","Target left",3)
+	
+					running = false
+	
+					break
+				end
+	
+				local targetChar = lockedPlayer.Character
+				local targetHRP = getHRP(targetChar)
+	
+				local hum = targetChar and targetChar:FindFirstChildWhichIsA("Humanoid")
+	
+				if targetChar and targetHRP and hum then
+					local ff = targetChar:FindFirstChild("ForceField")
+	
+					if ff then
+						if not forceFieldDebounce then
+							forceFieldDebounce = true
+							notify("ForceField","Waiting...",2)
+						end
+	
+						tp(targetHRP,CFrame.new(0,15,0))
+					else
+						forceFieldDebounce = false
+	
+						fireSnatch(targetChar)
+	
+						if hum.Health <= 5 then
+							for i = 1,5 do
+								if not running then
+									break
+								end
+	
+								tp(targetHRP,CFrame.new(0,0,0))
+	
+								fireHit(targetChar)
+	
+								task.wait(0.08)
+	
+								fireStomp()
+	
+								RunService.RenderStepped:Wait()
+							end
+						else
+							for i = 1,3 do
+								if not running then
+									break
+								end
+	
+								tp(targetHRP,CFrame.new(0,0,-1.5))
+	
+								fireHit(targetChar)
+	
+								RunService.RenderStepped:Wait()
+							end
+						end
+					end
+				end
+	
+				task.wait(0.03)
+			end
+	
+			uiStroke.Color = Color3.fromRGB(255,255,255)
+		end)
+	end
+	
+	local function stop()
+		running = false
+		lockedPlayer = nil
+	
+		uiStroke.Color = Color3.fromRGB(255,255,255)
+	end
+	
+	button.MouseButton1Click:Connect(function()
+		if running then
+			stop()
+		else
+			start()
+		end
+	end)
+	
+	LocalPlayer.CharacterAdded:Connect(function()
+		if running then
+			task.wait(1)
+	
+			equipFist()
+		end
+	end)
+end
+coroutine.wrap(BUGTKGB_fake_script)()
+local function KTKUEC_fake_script() -- AutoFight.LocalScript 
+	local script = Instance.new('LocalScript', AutoFight)
+
+	local Players = game:GetService("Players")
+	local ReplicatedStorage = game:GetService("ReplicatedStorage")
+	local UserInputService = game:GetService("UserInputService")
+	
+	local LocalPlayer = Players.LocalPlayer
+	local button = script.Parent
+	
+	local oldStroke = button:FindFirstChild("UIStroke")
+	
+	if oldStroke then
+		oldStroke:Destroy()
+	end
+	
+	local uiStroke = Instance.new("UIStroke")
+	uiStroke.Parent = button
+	uiStroke.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+	uiStroke.Transparency = 0
+	uiStroke.Color = Color3.fromRGB(255,255,255)
+	uiStroke.Thickness = 0.6
+	
+	local running = false
+	local loopThread
+	
+	local function spamHit()
+		local args = {
+			{
+				Event = "Hit",
+				ClientHitbox = {}
+			}
+		}
+		ReplicatedStorage:WaitForChild("Event"):FireServer(unpack(args))
+	end
+	
+	local function start()
+		if running then
+			return
+		end
+	
+		running = true
+	
+		uiStroke.Color = Color3.fromRGB(0,255,0)
+	
+		loopThread = task.spawn(function()
+			while running do
+				pcall(spamHit)
+				task.wait(0.15)
+			end
+		end)
+	end
+	
+	local function stop()
+		running = false
+	
+		uiStroke.Color = Color3.fromRGB(255,255,255)
+	
+		if loopThread then
+			task.cancel(loopThread)
+			loopThread = nil
+		end
+	end
+	
+	local function toggle()
+		if running then
+			stop()
+		else
+			start()
+		end
+	end
+	
+	button.MouseButton1Click:Connect(toggle)
+	
+	UserInputService.InputBegan:Connect(function(input, gameProcessed)
+		if gameProcessed then
+			return
+		end
+	
+		if _G.keybindsBlocked then
+			return
+		end
+	
+		if input.KeyCode == Enum.KeyCode.H then
+			toggle()
+		end
+	end)
+end
+coroutine.wrap(KTKUEC_fake_script)()
+local function OVEL_fake_script() -- EspFrame.LocalScript 
+	local script = Instance.new('LocalScript', EspFrame)
+
+	local Players = game:GetService("Players")
+	local LocalPlayer = Players.LocalPlayer
+	local RunService = game:GetService("RunService")
+	local Workspace = game:GetService("Workspace")
+	
+	local buttonNames = {
+		"ItemEsp",
+		"HighLightPlayer",
+		"NameEsp",
+		"HealthEsp",
+		"RobberyEsp",
+		"Tracers"
+	}
+	
+	local buttons = {}
+	local espToggles = {}
+	local highlights = {}
+	
+	local healthTags = {}
+	local nameTags = {}
+	
+	local DISTANCE_BOOST_START = 100
+	
+	for _, name in ipairs(buttonNames) do
+		espToggles[name] = false
+		highlights[name] = {}
+	end
+	
+	local function getPlayerDistance(player)
+		local char = LocalPlayer.Character
+		local hrp = char and char:FindFirstChild("HumanoidRootPart")
+		local targetHrp = player.Character and player.Character:FindFirstChild("HumanoidRootPart")
+	
+		if hrp and targetHrp then
+			return (hrp.Position - targetHrp.Position).Magnitude
+		end
+	
+		return 0
+	end
+	
+	local function getDistanceScale(dist)
+		if dist < DISTANCE_BOOST_START then
+			return 1
+		end
+	
+		return 1 + math.min((dist - DISTANCE_BOOST_START) / 100, 1) * 0.75
+	end
+	
+	local function getHealthColor(ratio)
+		ratio = math.clamp(ratio, 0, 1)
+	
+		if ratio > 0.5 then
+			return Color3.fromRGB(255, 210, 50):Lerp(
+				Color3.fromRGB(70, 255, 110),
+				(ratio - 0.5) / 0.5
+			)
+		end
+	
+		return Color3.fromRGB(255, 50, 50):Lerp(
+			Color3.fromRGB(255, 210, 50),
+			ratio / 0.5
+		)
+	end
+	
+	local function setupButton(name)
+		local button = script.Parent:FindFirstChild(name)
+	
+		if button then
+			buttons[name] = button
+	
+			local oldStroke = button:FindFirstChild("UIStroke")
+	
+			if oldStroke then
+				oldStroke:Destroy()
+			end
+	
+			local uiStroke = Instance.new("UIStroke")
+			uiStroke.Parent = button
+			uiStroke.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+			uiStroke.Transparency = 0
+			uiStroke.Thickness = 0.6
+			uiStroke.Color = Color3.fromRGB(255,255,255)
+	
+			button.MouseButton1Click:Connect(function()
+				espToggles[name] = not espToggles[name]
+	
+				if espToggles[name] then
+					uiStroke.Color = Color3.fromRGB(0,255,0)
+				else
+					uiStroke.Color = Color3.fromRGB(255,255,255)
+				end
+	
+				if name == "HealthEsp" and not espToggles[name] then
+					for _, tag in pairs(healthTags) do
+						if tag and tag.Parent then
+							tag:Destroy()
+						end
+					end
+	
+					healthTags = {}
+				end
+	
+				if name == "NameEsp" and not espToggles[name] then
+					for _, tag in pairs(nameTags) do
+						if tag and tag.Parent then
+							tag:Destroy()
+						end
+					end
+	
+					nameTags = {}
+				end
+			end)
+		end
+	end
+	
+	local function clearHighlights(espType)
+		if highlights[espType] then
+			for _, obj in ipairs(highlights[espType]) do
+				if obj and obj.Parent then
+					obj:Destroy()
+				end
+			end
+	
+			highlights[espType] = {}
+		end
+	end
+	
+	local function createHighlight(obj, color, espType)
+		local highlight = Instance.new("Highlight")
+	
+		highlight.FillColor = color
+		highlight.OutlineColor = color
+		highlight.FillTransparency = 0.45
+		highlight.OutlineTransparency = 0
+		highlight.DepthMode = Enum.HighlightDepthMode.AlwaysOnTop
+		highlight.Adornee = obj
+		highlight.Parent = obj
+	
+		table.insert(highlights[espType], highlight)
+	
+		return highlight
+	end
+	
+	local function applyTeamHighlight(character, teamColor)
+		if not character then
+			return
+		end
+	
+		local highlight = character:FindFirstChild("PlayerHighlight")
+	
+		if not highlight then
+			highlight = Instance.new("Highlight")
+			highlight.Name = "PlayerHighlight"
+			highlight.Parent = character
+	
+			table.insert(highlights.HighLightPlayer, highlight)
+		end
+	
+		if teamColor then
+			highlight.FillColor = teamColor.Color
+			highlight.OutlineColor = teamColor.Color
+			highlight.FillTransparency = 0.7
+			highlight.OutlineTransparency = 0.25
+		end
+	end
+	
+	local function createNameTag(player, head)
+		local tag = Instance.new("BillboardGui")
+		tag.Name = "NameTag"
+		tag.Adornee = head
+		tag.Size = UDim2.new(0,120,0,22)
+		tag.StudsOffset = Vector3.new(0,3.8,0)
+		tag.AlwaysOnTop = true
+		tag.MaxDistance = 500
+		tag.Parent = head
+	
+		local textLabel = Instance.new("TextLabel")
+		textLabel.Name = "Name"
+		textLabel.Size = UDim2.new(1,0,1,0)
+		textLabel.BackgroundTransparency = 1
+		textLabel.Text = player.Name
+		textLabel.Font = Enum.Font.GothamBold
+		textLabel.TextColor3 = player.TeamColor.Color
+		textLabel.TextSize = 14
+		textLabel.TextStrokeTransparency = 0.5
+		textLabel.Parent = tag
+	
+		nameTags[player] = tag
+	
+		return tag
+	end
+	
+	local function updateNameTag(player)
+		if not espToggles.NameEsp then
+			return
+		end
+	
+		local char = player.Character
+	
+		if not char then
+			return
+		end
+	
+		local head = char:FindFirstChild("Head")
+	
+		if not head then
+			return
+		end
+	
+		local tag = nameTags[player]
+	
+		if not tag or tag.Adornee ~= head then
+			if tag then
+				tag:Destroy()
+			end
+	
+			tag = createNameTag(player, head)
+		end
+	
+		local dist = getPlayerDistance(player)
+		local scale = getDistanceScale(dist)
+	
+		tag.Size = UDim2.new(
+			0,
+			math.floor(120 * scale),
+			0,
+			math.floor(22 * scale)
+		)
+	
+		local label = tag:FindFirstChild("Name")
+	
+		if label then
+			label.Text = player.Name
+			label.TextColor3 = player.TeamColor.Color
+			label.TextSize = math.floor(14 * scale)
+		end
+	end
+	
+	local function createHealthTag(player, head)
+		local tag = Instance.new("BillboardGui")
+		tag.Name = "HealthEsp"
+		tag.Adornee = head
+		tag.Size = UDim2.new(0,90,0,20)
+		tag.StudsOffset = Vector3.new(0,2.1,0)
+		tag.AlwaysOnTop = true
+		tag.MaxDistance = 400
+		tag.Parent = head
+	
+		local barBack = Instance.new("Frame")
+		barBack.Name = "BarBack"
+		barBack.Size = UDim2.new(1,0,0,7)
+		barBack.BackgroundColor3 = Color3.fromRGB(25,25,25)
+		barBack.BorderSizePixel = 0
+		barBack.Parent = tag
+	
+		local corner = Instance.new("UICorner")
+		corner.CornerRadius = UDim.new(0,3)
+		corner.Parent = barBack
+	
+		local barFill = Instance.new("Frame")
+		barFill.Name = "BarFill"
+		barFill.Size = UDim2.new(1,0,1,0)
+		barFill.BackgroundColor3 = Color3.fromRGB(70,255,110)
+		barFill.BorderSizePixel = 0
+		barFill.Parent = barBack
+	
+		local fillCorner = Instance.new("UICorner")
+		fillCorner.CornerRadius = UDim.new(0,3)
+		fillCorner.Parent = barFill
+	
+		local hpText = Instance.new("TextLabel")
+		hpText.Name = "HpText"
+		hpText.Size = UDim2.new(1,0,0,10)
+		hpText.Position = UDim2.new(0,0,0,9)
+		hpText.BackgroundTransparency = 1
+		hpText.Font = Enum.Font.GothamMedium
+		hpText.TextSize = 10
+		hpText.TextColor3 = Color3.fromRGB(220,220,220)
+		hpText.TextStrokeTransparency = 0.5
+		hpText.Parent = tag
+	
+		healthTags[player] = tag
+	
+		return tag
+	end
+	
+	local function updateHealthTag(player)
+		if not espToggles.HealthEsp then
+			return
+		end
+	
+		local char = player.Character
+	
+		if not char then
+			return
+		end
+	
+		local hum = char:FindFirstChildOfClass("Humanoid")
+		local head = char:FindFirstChild("Head")
+	
+		if not hum or not head then
+			return
+		end
+	
+		local tag = healthTags[player]
+	
+		if not tag or tag.Adornee ~= head then
+			if tag then
+				tag:Destroy()
+			end
+	
+			tag = createHealthTag(player, head)
+		end
+	
+		local dist = getPlayerDistance(player)
+		local scale = getDistanceScale(dist)
+	
+		tag.Size = UDim2.new(
+			0,
+			math.floor(90 * scale),
+			0,
+			math.floor(20 * scale)
+		)
+	
+		local ratio = hum.MaxHealth > 0 and hum.Health / hum.MaxHealth or 0
+		local color = getHealthColor(ratio)
+	
+		local barFill = tag.BarBack:FindFirstChild("BarFill")
+		local hpText = tag:FindFirstChild("HpText")
+	
+		if barFill then
+			barFill.Size = UDim2.new(math.clamp(ratio,0,1),0,1,0)
+			barFill.BackgroundColor3 = color
+		end
+	
+		if hpText then
+			hpText.TextSize = math.floor(10 * scale)
+	
+			if hum.Health <= 0 then
+				hpText.Text = "DEAD"
+				hpText.TextColor3 = Color3.fromRGB(255,80,80)
+			else
+				hpText.Text = math.floor(hum.Health) .. " / " .. math.floor(hum.MaxHealth)
+			end
+		end
+	end
+	
+	local function updateHighlightPlayer()
+		clearHighlights("HighLightPlayer")
+	
+		if espToggles.HighLightPlayer then
+			for _, player in ipairs(Players:GetPlayers()) do
+				if player ~= LocalPlayer and player.Character then
+					local team = player.Team
+					local teamColor = team and team.TeamColor
+	
+					applyTeamHighlight(player.Character, teamColor)
+				end
+			end
+		end
+	end
+	
+	local function updateRobberyESP()
+		clearHighlights("RobberyEsp")
+	
+		if not espToggles.RobberyEsp then
+			return
+		end
+	
+		local map = Workspace:FindFirstChild("Map")
+	
+		if not map then
+			return
+		end
+	
+		local cashiers = map:FindFirstChild("Cashiers")
+	
+		if cashiers then
+			for _, cashier in ipairs(cashiers:GetChildren()) do
+				if cashier:IsA("Model") then
+					local opened = cashier:FindFirstChild("Opened", true)
+					local color = Color3.fromRGB(0, 255, 0)
+	
+					if opened and opened:IsA("BasePart") then
+						if opened.Transparency == 0 then
+							color = Color3.fromRGB(255, 0, 0)
+						end
+					end
+	
+					createHighlight(cashier, color, "RobberyEsp")
+				end
+			end
+		end
+	
+		local atms = map:FindFirstChild("ATMs")
+	
+		if atms then
+			for _, atm in ipairs(atms:GetChildren()) do
+				if atm:IsA("Model") then
+					local screen = atm:FindFirstChild("Screen", true)
+					local color = Color3.fromRGB(255, 0, 0)
+	
+					if screen and screen:IsA("BasePart") then
+						local screenColor = screen.Color
+						local targetColor = Color3.fromRGB(113, 118, 165)
+	
+						if math.abs(screenColor.R - targetColor.R) < 0.01
+							and math.abs(screenColor.G - targetColor.G) < 0.01
+							and math.abs(screenColor.B - targetColor.B) < 0.01 then
+	
+							color = Color3.fromRGB(0, 255, 0)
+						end
+					end
+	
+					createHighlight(atm, color, "RobberyEsp")
+				end
+			end
+		end
+	end
+	
+	local function updateItemESP()
+		clearHighlights("ItemEsp")
+	
+		if espToggles.ItemEsp then
+			local pickupItems = Workspace:FindFirstChild("PickUpItems")
+	
+			if pickupItems then
+				for _, obj in ipairs(pickupItems:GetChildren()) do
+					if obj:IsA("Model") then
+						createHighlight(obj, Color3.fromRGB(0,255,0), "ItemEsp")
+					elseif obj:IsA("BasePart") and obj.CanCollide then
+						createHighlight(obj, Color3.fromRGB(0,255,0), "ItemEsp")
+					end
+				end
+			end
+	
+			local bench = Workspace:FindFirstChild("Bench")
+	
+			if bench then
+				for _, obj in ipairs(bench:GetChildren()) do
+					if obj:IsA("Model") then
+						createHighlight(obj, Color3.fromRGB(0,255,0), "ItemEsp")
+					elseif obj:IsA("BasePart") and obj.CanCollide then
+						createHighlight(obj, Color3.fromRGB(0,255,0), "ItemEsp")
+					end
+				end
+			end
+		end
+	end
+	
+	local function updateTracers()
+		clearHighlights("Tracers")
+	
+		if espToggles.Tracers
+			and LocalPlayer.Character
+			and LocalPlayer.Character:FindFirstChild("HumanoidRootPart") then
+	
+			local origin = LocalPlayer.Character.HumanoidRootPart:FindFirstChild("TracerOrigin")
+	
+			if not origin then
+				origin = Instance.new("Attachment")
+				origin.Name = "TracerOrigin"
+				origin.Parent = LocalPlayer.Character.HumanoidRootPart
+			end
+	
+			table.insert(highlights.Tracers, origin)
+	
+			for _, player in ipairs(Players:GetPlayers()) do
+				if player ~= LocalPlayer
+					and player.Character
+					and player.Character:FindFirstChild("HumanoidRootPart") then
+	
+					local targetAttach = Instance.new("Attachment")
+					targetAttach.Parent = player.Character.HumanoidRootPart
+	
+					local beam = Instance.new("Beam")
+					beam.FaceCamera = true
+					beam.Color = ColorSequence.new(Color3.fromRGB(0,255,255))
+					beam.Width0 = 0.6
+					beam.Width1 = 0.6
+					beam.Transparency = NumberSequence.new(0.5)
+	
+					beam.Attachment0 = origin
+					beam.Attachment1 = targetAttach
+					beam.Parent = Workspace
+	
+					table.insert(highlights.Tracers, beam)
+					table.insert(highlights.Tracers, targetAttach)
+				end
+			end
+		end
+	end
+	
+	for _, name in ipairs(buttonNames) do
+		setupButton(name)
+	end
+	
+	local function updateAllESP()
+		updateHighlightPlayer()
+		updateRobberyESP()
+		updateItemESP()
+		updateTracers()
+	
+		for _, player in ipairs(Players:GetPlayers()) do
+			if player ~= LocalPlayer then
+				updateNameTag(player)
+				updateHealthTag(player)
+			end
+		end
+	end
+	
+	local lastUpdate = 0
+	
+	RunService.Heartbeat:Connect(function()
+		local currentTime = tick()
+	
+		if currentTime - lastUpdate >= 0.25 then
+			updateAllESP()
+			lastUpdate = currentTime
+		end
+	end)
+end
+coroutine.wrap(OVEL_fake_script)()
+local function GYJY_fake_script() -- ATMsFarm.LocalScript 
+	local script = Instance.new('LocalScript', ATMsFarm)
+
+	local Players = game:GetService("Players")
+	local ReplicatedStorage = game:GetService("ReplicatedStorage")
+	local RunService = game:GetService("RunService")
+	
+	local LocalPlayer = Players.LocalPlayer
+	local button = script.Parent
+	
+	local EventRemote = ReplicatedStorage:WaitForChild("Event")
+	
+	local oldStroke = button:FindFirstChild("UIStroke")
+	
+	if oldStroke then
+		oldStroke:Destroy()
+	end
+	
+	local uiStroke = Instance.new("UIStroke")
+	uiStroke.Parent = button
+	uiStroke.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+	uiStroke.Transparency = 0
+	uiStroke.Thickness = 0.6
+	uiStroke.Color = Color3.fromRGB(255,255,255)
+	
+	local running = false
+	local processing = false
+	
+	local Character
+	local HRP
+	
+	local teleportThread
+	local spamThread
+	local loopThread
+	local jumpConnection 
+	
+	local originalGravity = workspace.Gravity
+	
+	local targetColor = Color3.fromRGB(113,118,165)
+	
+	local allATMs = {}
+	local allCashiers = {}
+	
+	local currentTarget = nil
+	local equippedTool = nil
+	local skipUntil = {}
+	
+	local atmsFolder = workspace:WaitForChild("Map"):WaitForChild("ATMs")
+	local cashiersFolder = workspace:WaitForChild("Map"):WaitForChild("Cashiers")
+	
+	local function refreshCharacter()
+		Character = LocalPlayer.Character or LocalPlayer.CharacterAdded:Wait()
+	
+		if Character then
+			HRP = Character:WaitForChild("HumanoidRootPart",10)
+		end
+	end
+	
+	refreshCharacter()
+	
+	LocalPlayer.CharacterAdded:Connect(function(char)
+		Character = char
+		HRP = char:WaitForChild("HumanoidRootPart",10)
+		equippedTool = nil
+	
+		if running then
+			workspace.Gravity = 0
+		end
+	end)
+	
+	for _,v in ipairs(atmsFolder:GetChildren()) do
+		if v:IsA("Model") then
+			table.insert(allATMs,v)
+		end
+	end
+	
+	for _,v in ipairs(cashiersFolder:GetChildren()) do
+		if v:IsA("Model") then
+			table.insert(allCashiers,v)
+		end
+	end
+	
+	local function freezeVel()
+		if HRP then
+			HRP.AssemblyLinearVelocity = Vector3.zero
+			HRP.AssemblyAngularVelocity = Vector3.zero
+		end
+	end
+	
+	local function equipFirstTool()
+		if not Character then
+			return
+		end
+	
+		local humanoid = Character:FindFirstChildOfClass("Humanoid")
+	
+		if not humanoid then
+			return
+		end
+	
+		if equippedTool and equippedTool.Parent == Character then
+			return
+		end
+	
+		local fist = LocalPlayer.Backpack:FindFirstChild("Fist")
+	
+		if fist and fist:IsA("Tool") then
+			humanoid:EquipTool(fist)
+			equippedTool = fist
+		end
+	end
+	
+	local function fireHitRemote(target,isCashier)
+		local folder = isCashier and cashiersFolder or atmsFolder
+	
+		EventRemote:FireServer({
+			Event = "Hit",
+			ClientHitbox = {
+				folder:FindFirstChild(target)
+			}
+		})
+	end
+	
+	local function fireCollectRemote()
+		EventRemote:FireServer({
+			Event = "CollectDollar",
+			Dollar = Instance.new("MeshPart")
+		})
+	end
+	
+	local function makeUncollidable(model)
+		for _,v in ipairs(model:GetDescendants()) do
+			if v:IsA("BasePart") then
+				v.CanCollide = false
+			end
+		end
+	end
+	
+	local function screenIsTarget(atm)
+		local screen = atm:FindFirstChild("Screen")
+	
+		return screen
+			and screen:IsA("MeshPart")
+			and screen.Color == targetColor
+	end
+	
+	local function cashierIsTarget(cashier)
+		local opened = cashier:FindFirstChild("Opened")
+	
+		return opened
+			and opened:IsA("BasePart")
+			and opened.Transparency == 1
+	end
+	
+	local function getMatchingATMs()
+		local t = {}
+	
+		for _,atm in ipairs(allATMs) do
+			if screenIsTarget(atm) then
+				table.insert(t,atm)
+			end
+		end
+	
+		return t
+	end
+	
+	local function getMatchingCashiers()
+		local t = {}
+	
+		for _,cashier in ipairs(allCashiers) do
+			if cashierIsTarget(cashier) then
+				table.insert(t,cashier)
+			end
+		end
+	
+		return t
+	end
+	
+	local function stopTeleportLoop()
+		if teleportThread then
+			task.cancel(teleportThread)
+			teleportThread = nil
+		end
+	
+		currentTarget = nil
+	end
+	
+	local function startTeleportLoop()
+		stopTeleportLoop()
+	
+		teleportThread = task.spawn(function()
+			while running do
+				if currentTarget and HRP then
+					HRP.CFrame = currentTarget:GetPivot()
+					freezeVel()
+				end
+	
+				RunService.Heartbeat:Wait()
+			end
+		end)
+	end
+	
+	local function stopSpam()
+		if spamThread then
+			task.cancel(spamThread)
+			spamThread = nil
+		end
+	end
+	
+	local function startSpam()
+		stopSpam()
+	
+		spamThread = task.spawn(function()
+			while running do
+				pcall(function()
+					equipFirstTool()
+	
+					for _,atm in ipairs(allATMs) do
+						if screenIsTarget(atm) then
+							fireHitRemote(atm.Name,false)
+						end
+					end
+	
+					for _,cashier in ipairs(allCashiers) do
+						if cashierIsTarget(cashier) then
+							fireHitRemote(cashier.Name,true)
+						end
+					end
+	
+					fireCollectRemote()
+				end)
+	
+				task.wait(0.1)
+			end
+		end)
+	end
+	
+	local function processATM(atm)
+		if not HRP then
+			return
+		end
+	
+		makeUncollidable(atm)
+	
+		currentTarget = atm
+	
+		startTeleportLoop()
+	
+		local attempts = 0
+	
+		while running and screenIsTarget(atm) and attempts < 10 do
+			attempts = attempts + 1
+	
+			HRP.CFrame = atm:GetPivot() * CFrame.new(0,-2,0)
+	
+			freezeVel()
+	
+			local startTick = tick()
+	
+			while tick() - startTick < 4 and screenIsTarget(atm) and running do
+				equipFirstTool()
+				fireHitRemote(atm.Name,false)
+	
+				task.wait(0.35)
+			end
+	
+			for i = 1,10 do
+				if not running then
+					break
+				end
+	
+				fireCollectRemote()
+	
+				task.wait(0.2)
+			end
+	
+			task.wait(0.1)
+		end
+	
+		stopTeleportLoop()
+	end
+	
+	local function processCashier(cashier)
+		if not HRP then
+			return
+		end
+	
+		makeUncollidable(cashier)
+	
+		currentTarget = cashier
+	
+		startTeleportLoop()
+	
+		local attempts = 0
+	
+		while running and cashierIsTarget(cashier) and attempts < 10 do
+			attempts = attempts + 1
+	
+			HRP.CFrame = cashier:GetPivot()
+	
+			freezeVel()
+	
+			local startTick = tick()
+	
+			while tick() - startTick < 4 and cashierIsTarget(cashier) and running do
+				equipFirstTool()
+				fireHitRemote(cashier.Name,true)
+	
+				task.wait(0.35)
+			end
+	
+			for i = 1,10 do
+				if not running then
+					break
+				end
+	
+				fireCollectRemote()
+	
+				task.wait(0.2)
+			end
+	
+			task.wait(0.5)
+		end
+	
+		stopTeleportLoop()
+	end
+	
+	local function doCycle()
+		if processing then
+			return
+		end
+	
+		processing = true
+	
+		local atms = getMatchingATMs()
+	
+		if #atms > 0 then
+			for _,atm in ipairs(atms) do
+				if running then
+					processATM(atm)
+					task.wait(0.5)
+				end
+			end
+		else
+			local cashiers = getMatchingCashiers()
+	
+			for _,cashier in ipairs(cashiers) do
+				if running then
+					processCashier(cashier)
+					task.wait(0.5)
+				end
+			end
+		end
+	
+		processing = false
+	end
+	
+	local function start()
+		if running then
+			return
+		end
+	
+		running = true
+	
+		uiStroke.Color = Color3.fromRGB(0,255,0)
+	
+		originalGravity = workspace.Gravity
+		workspace.Gravity = 0
+	
+		refreshCharacter()
+	
+		equipFirstTool()
+	
+		jumpConnection = RunService.Heartbeat:Connect(function()
+			local Humanoid = Character and Character:FindFirstChildOfClass("Humanoid")
+			if Humanoid and Humanoid.Health > 0 then
+				Humanoid.Jump = true
+			end
+		end)
+	
+		startSpam()
+	
+		loopThread = task.spawn(function()
+			while running do
+				pcall(doCycle)
+				task.wait(0.2)
+			end
+		end)
+	end
+	
+	local function stop()
+		running = false
+	
+		uiStroke.Color = Color3.fromRGB(255,255,255)
+	
+		workspace.Gravity = originalGravity
+	
+		if jumpConnection then
+			jumpConnection:Disconnect()
+			jumpConnection = nil
+		end
+	
+		stopTeleportLoop()
+		stopSpam()
+	
+		processing = false
+	
+		if loopThread then
+			task.cancel(loopThread)
+			loopThread = nil
+		end
+	end
+	
+	button.MouseButton1Click:Connect(function()
+		if running then
+			stop()
+		else
+			start()
+		end
+	end)
+end
+coroutine.wrap(GYJY_fake_script)()
+local function NIIIAR_fake_script() -- KillAll.LocalScript 
+	local script = Instance.new('LocalScript', KillAll)
+
+	local Players = game:GetService("Players")
+	local ReplicatedStorage = game:GetService("ReplicatedStorage")
+	local RunService = game:GetService("RunService")
+	local Workspace = game:GetService("Workspace")
+	
+	local LocalPlayer = Players.LocalPlayer
+	local button = script.Parent
+	local killAll1Button = button:WaitForChild("KillAll1")
+	
+	local uiStroke = button:FindFirstChild("UIStroke") or Instance.new("UIStroke")
+	uiStroke.Parent = button
+	uiStroke.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+	uiStroke.Transparency = 0
+	uiStroke.Thickness = 0.6
+	uiStroke.Color = Color3.fromRGB(255,255,255)
+	
+	local killAll1Stroke = killAll1Button:FindFirstChild("UIStroke") or Instance.new("UIStroke")
+	killAll1Stroke.Parent = killAll1Button
+	killAll1Stroke.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+	killAll1Stroke.Transparency = 0
+	killAll1Stroke.Thickness = 0.6
+	killAll1Stroke.Color = Color3.fromRGB(255,255,255)
+	
+	local running = false
+	local killAll1Mode = false
+	local lockedTarget = nil
+	local lastKilledTarget = nil
+	local lastHitTime = 0
+	local MIN_HIT_INTERVAL = 0.03
+	local healingCritical = false
+	local healingPostStomp = false
+	local waitingForFF = false
+	local stompInProgress = false
+	local lastSafePosition = Vector3.new(0, 50, 0)
+	local noCollideTargets = {}
+	
+	local function getCharacter() return LocalPlayer.Character end
+	local function getHRP(char)
+		if not char then return nil end
+		return char:FindFirstChild("HumanoidRootPart") or char.PrimaryPart
+	end
+	local function hasForceField(char) return char and char:FindFirstChild("ForceField") ~= nil end
+	local function hasEnabledPVPTag(targetChar)
+		local hrp = getHRP(targetChar)
+		if not hrp then return false end
+		local pvptag = hrp:FindFirstChild("PVPTag", true)
+		if pvptag and pvptag:IsA("BillboardGui") and pvptag.Enabled then
+			return true
+		end
+		return false
+	end
+	local function getSafeLocation()
+		local map = Workspace:FindFirstChild("Map")
+		if map then local spawn = map:FindFirstChild("SpawnLocation") if spawn then return spawn.CFrame end end
+		return CFrame.new(lastSafePosition)
+	end
+	local function updateSafePosition()
+		local char = getCharacter()
+		local hrp = getHRP(char)
+		if not hrp then return end
+		local pos = hrp.Position
+		if pos.Y > -50 and math.abs(pos.X) < 1000 and math.abs(pos.Z) < 1000 then
+			lastSafePosition = pos
+		end
+	end
+	local function ensureLocalCollide()
+		local char = getCharacter()
+		if not char then return end
+		for _, desc in ipairs(char:GetDescendants()) do
+			if desc:IsA("BasePart") then
+				desc.CanCollide = true
+			end
+		end
+	end
+	local function setTargetNoCollide(targetChar, enabled)
+		if not targetChar then return end
+		if enabled then
+			noCollideTargets[targetChar] = true
+			for _, desc in ipairs(targetChar:GetDescendants()) do
+				if desc:IsA("BasePart") then
+					desc.CanCollide = false
+				end
+			end
+		else
+			noCollideTargets[targetChar] = nil
+			for _, desc in ipairs(targetChar:GetDescendants()) do
+				if desc:IsA("BasePart") then
+					desc.CanCollide = true
+				end
+			end
+		end
+	end
+	local function clearAllNoCollide()
+		for targetChar in pairs(noCollideTargets) do
+			setTargetNoCollide(targetChar, false)
+		end
+		noCollideTargets = {}
+	end
+	local function equipFist()
+		local char = getCharacter()
+		if not char then return end
+		local hum = char:FindFirstChildOfClass("Humanoid")
+		local fist = LocalPlayer.Backpack:FindFirstChild("Fist")
+		if hum and fist and fist:IsA("Tool") then hum:EquipTool(fist) end
+	end
+	local function isTargetDowned(targetChar)
+		if not targetChar then return false end
+		local hum = targetChar:FindFirstChildOfClass("Humanoid")
+		if not hum then return false end
+		if hum:GetState() == Enum.HumanoidStateType.Ragdoll or hum:GetState() == Enum.HumanoidStateType.FallingDown or hum:GetState() == Enum.HumanoidStateType.Physics then
+			return true
+		end
+		return hum.Health <= 1
+	end
+	local STOMP_HEALTH = 4
+	local function isTargetPlayerDead(plr)
+		if not plr or not Players:GetPlayerByUserId(plr.UserId) then return true end
+		local char = plr.Character
+		if not char then return false end
+		local hum = char:FindFirstChildOfClass("Humanoid")
+		return hum and hum.Health <= 0
+	end
+	local function getLocalHealth()
+		local hum = getCharacter() and getCharacter():FindFirstChildOfClass("Humanoid")
+		return hum and hum.Health or 100
+	end
+	local function needsHealAfterKill()
+		return killAll1Mode and getLocalHealth() < 100
+	end
+	local function getRandomTarget(excludePlr)
+		local targets = {}
+		for _, plr in ipairs(Players:GetPlayers()) do
+			if plr ~= LocalPlayer and plr ~= excludePlr then
+				local char = plr.Character
+				if char then
+					local hum = char:FindFirstChildOfClass("Humanoid")
+					if hum and hum.Health > 0 and not hasEnabledPVPTag(char) then
+						table.insert(targets, plr)
+					end
+				end
+			end
+		end
+		return #targets > 0 and targets[math.random(1,#targets)] or nil
+	end
+	local function acquireTarget()
+		lockedTarget = getRandomTarget(lastKilledTarget)
+		if lockedTarget and lockedTarget.Character then
+			return lockedTarget.Character
+		end
+		lockedTarget = nil
+		return nil
+	end
+	local function releaseTarget()
+		if lockedTarget then
+			lastKilledTarget = lockedTarget
+			local char = lockedTarget.Character
+			if char then setTargetNoCollide(char, false) end
+		end
+		lockedTarget = nil
+	end
+	local function isTargetAirborne(targetHRP)
+		local char = targetHRP.Parent
+		local hum = char and char:FindFirstChildOfClass("Humanoid")
+		if hum and hum.FloorMaterial == Enum.Material.Air then
+			return true
+		end
+		local raycastParams = RaycastParams.new()
+		raycastParams.FilterDescendantsInstances = {char, getCharacter()}
+		raycastParams.FilterType = Enum.RaycastFilterType.Exclude
+		raycastParams.IgnoreWater = true
+		local rayResult = Workspace:Raycast(targetHRP.Position, Vector3.new(0, -120, 0), raycastParams)
+		if not rayResult then return true end
+		return targetHRP.Position.Y - rayResult.Position.Y > 5
+	end
+	local function fastTP(targetHRP, x, y, z, mode)
+		local localChar = getCharacter()
+		local localHRP = getHRP(localChar)
+		if not localHRP or not targetHRP then return end
+	
+		localHRP.AssemblyLinearVelocity = Vector3.zero
+		localHRP.AssemblyAngularVelocity = Vector3.zero
+	
+		local desiredPos = (targetHRP.CFrame * CFrame.new(
+			x + math.random(-1, 1) / 40,
+			y,
+			z + math.random(-1, 1) / 40
+			)).Position
+	
+		local raycastParams = RaycastParams.new()
+		raycastParams.FilterDescendantsInstances = {localChar, targetHRP.Parent}
+		raycastParams.FilterType = Enum.RaycastFilterType.Exclude
+		raycastParams.IgnoreWater = true
+	
+		local airborne = isTargetAirborne(targetHRP)
+		local finalPos = desiredPos
+	
+		if not airborne then
+			local rayResult = Workspace:Raycast(desiredPos + Vector3.new(0, 8, 0), Vector3.new(0, -25, 0), raycastParams)
+			if rayResult then
+				local groundY = rayResult.Position.Y + 3
+				if math.abs(groundY - desiredPos.Y) < 8 then
+					finalPos = Vector3.new(desiredPos.X, groundY, desiredPos.Z)
+				end
+			elseif desiredPos.Y < lastSafePosition.Y - 10 then
+				finalPos = Vector3.new(desiredPos.X, lastSafePosition.Y, desiredPos.Z)
+			end
+		end
+	
+		local flatOffset = Vector3.new(finalPos.X - targetHRP.Position.X, 0, finalPos.Z - targetHRP.Position.Z)
+		local minDist = mode == "stomp" and 1.2 or 2.8
+		if flatOffset.Magnitude < minDist then
+			local dir = flatOffset.Magnitude > 0.1 and flatOffset.Unit or -targetHRP.CFrame.LookVector
+			local pushed = targetHRP.Position + dir * minDist
+			finalPos = Vector3.new(pushed.X, finalPos.Y, pushed.Z)
+		end
+	
+		local aimY = targetHRP.Position.Y + (mode == "stomp" and -1 or -2.5)
+		localHRP.CFrame = CFrame.lookAt(finalPos, Vector3.new(targetHRP.Position.X, aimY, targetHRP.Position.Z))
+		localHRP.AssemblyLinearVelocity = Vector3.zero
+		localHRP.AssemblyAngularVelocity = Vector3.zero
+	
+		updateSafePosition()
+	end
+	local function fireHit(char)
+		if not char then return end
+		ReplicatedStorage.Event:FireServer(unpack({{Event = "Hit", ClientHitbox = {char}}}))
+	end
+	local function fireSnatch()
+		ReplicatedStorage.Event:FireServer(unpack({{Event = "Snatch", ClientHitbox = {}}}))
+	end
+	local function fireStomp()
+		ReplicatedStorage.Event:FireServer(unpack({{Event = "Stomp"}}))
+	end
+	local function attackTarget(targetChar, light)
+		if not targetChar or not targetChar.Parent then return end
+		equipFist()
+		fireHit(targetChar)
+		if not light then
+			fireHit(targetChar)
+			fireHit(targetChar)
+		end
+		task.defer(function()
+			if targetChar.Parent then
+				equipFist()
+				fireHit(targetChar)
+			end
+		end)
+		lastHitTime = os.clock()
+	end
+	local function getFreeHospital()
+		local map = Workspace:FindFirstChild("Map")
+		if not map then return nil end
+		local buildings = map:FindFirstChild("Buildings")
+		if not buildings then return nil end
+		for _, desc in ipairs(buildings:GetDescendants()) do
+			if desc:IsA("Model") and desc.Name == "HospitalHeal" then
+				local main = desc:FindFirstChild("Main", true)
+				if main and main:IsA("MeshPart") then
+					local occupied = false
+					for _, child in ipairs(desc:GetDescendants()) do
+						if child:IsA("Seat") and child.Occupant ~= nil then occupied = true break end
+					end
+					if not occupied then
+						local attach = main:FindFirstChild("Attachment", true)
+						if attach then
+							local prompt = attach:FindFirstChild("HealHospital")
+							if prompt and prompt:IsA("ProximityPrompt") then
+								return {Prompt = prompt, Main = main}
+							end
+						end
+					end
+				end
+			end
+		end
+		return nil
+	end
+	local function healViaHospital(critical)
+		local char = getCharacter()
+		local hrp = getHRP(char)
+		local hum = char and char:FindFirstChildOfClass("Humanoid")
+		if not hrp or not hum or hum.Health >= 100 then return end
+		if critical then healingCritical = true else healingPostStomp = true end
+		local hosp = getFreeHospital()
+		if not hosp then
+			hrp.CFrame = getSafeLocation()
+			healingCritical = false healingPostStomp = false
+			return
+		end
+		local prompt = hosp.Prompt
+		prompt.MaxActivationDistance = math.huge
+		prompt.HoldDuration = 0
+		local healComplete = false
+		local healLoop = task.spawn(function()
+			while (healingCritical or healingPostStomp) and hum.Health < 100 and running do
+				hrp.CFrame = hosp.Main.CFrame
+				hrp.AssemblyLinearVelocity = Vector3.zero
+				hrp.AssemblyAngularVelocity = Vector3.zero
+				fireproximityprompt(prompt)
+				RunService.RenderStepped:Wait()
+			end
+			healComplete = true
+		end)
+		repeat task.wait() until healComplete or not running
+		healingCritical = false healingPostStomp = false
+		equipFist()
+		updateSafePosition()
+	end
+	local function shouldCriticalHeal()
+		local hum = getCharacter() and getCharacter():FindFirstChildOfClass("Humanoid")
+		return hum and hum.Health < 40 and not healingCritical and not healingPostStomp and not stompInProgress
+	end
+	local function shouldPostStompHeal()
+		local hum = getCharacter() and getCharacter():FindFirstChildOfClass("Humanoid")
+		return hum and hum.Health > 0 and hum.Health < 100 and not healingCritical and not healingPostStomp and not stompInProgress
+	end
+	local function checkFallingDeath()
+		if not running or healingCritical or healingPostStomp then return end
+		local char = getCharacter()
+		local hrp = getHRP(char)
+		local hum = char and char:FindFirstChildOfClass("Humanoid")
+		if not hrp then return end
+	
+		local falling = hrp.Position.Y < -30
+		if hum and hum.FloorMaterial == Enum.Material.Air and hrp.Position.Y < lastSafePosition.Y - 15 then
+			falling = true
+		end
+	
+		if falling then
+			local safe = getSafeLocation()
+			hrp.CFrame = safe
+			hrp.AssemblyLinearVelocity = Vector3.zero
+			hrp.AssemblyAngularVelocity = Vector3.zero
+			ensureLocalCollide()
+		end
+	end
+	local function waitForForceField()
+		if not lockedTarget then return end
+		waitingForFF = true
+		local localHRP = getHRP(getCharacter())
+		local safe = getSafeLocation()
+		if localHRP and safe then
+			localHRP.CFrame = safe
+			localHRP.AssemblyLinearVelocity = Vector3.zero
+			localHRP.AssemblyAngularVelocity = Vector3.zero
+		end
+		while running and lockedTarget do
+			local targetChar = lockedTarget.Character
+			if not targetChar or not hasForceField(targetChar) then break end
+			task.wait(0.05)
+			if shouldCriticalHeal() then healViaHospital(true) end
+		end
+		waitingForFF = false
+	end
+	local function executeStompSequence(targetChar)
+		if stompInProgress or not targetChar then return false end
+		stompInProgress = true
+		setTargetNoCollide(targetChar, true)
+		local targetHRP = getHRP(targetChar)
+		if not targetHRP then
+			stompInProgress = false
+			return false
+		end
+		local stompRetries = 0
+		local maxRetries = 6
+		local targetDied = false
+		local stompLoop = task.spawn(function()
+			while stompInProgress and running and targetChar.Parent do
+				targetHRP = getHRP(targetChar)
+				if targetHRP then fastTP(targetHRP, 0, 0.5, 0, "stomp") end
+				RunService.RenderStepped:Wait()
+			end
+		end)
+		task.wait(0.08)
+		repeat
+			local targetHum = targetChar:FindFirstChildOfClass("Humanoid")
+			if not targetHum or targetHum.Health <= 0 then
+				targetDied = true
+				break
+			end
+			if targetHum.Health > STOMP_HEALTH then
+				task.cancel(stompLoop)
+				stompInProgress = false
+				return false
+			end
+			if not isTargetDowned(targetChar) and targetHum.Health > 1 then
+				task.cancel(stompLoop)
+				stompInProgress = false
+				return false
+			end
+			fireStomp()
+			stompRetries += 1
+			task.wait(0.05)
+		until stompRetries >= maxRetries or not running or not targetChar.Parent
+		local finalTargetHum = targetChar:FindFirstChildOfClass("Humanoid")
+		targetDied = targetDied or not targetChar.Parent or (finalTargetHum and finalTargetHum.Health <= 0)
+		task.cancel(stompLoop)
+		stompInProgress = false
+		return targetDied
+	end
+	local function executeKillSequence()
+		if not lockedTarget then return false end
+		local killed = false
+	
+		while running and lockedTarget do
+			if isTargetPlayerDead(lockedTarget) then
+				killed = true
+				break
+			end
+	
+			local targetChar = lockedTarget.Character
+			if not targetChar then
+				task.wait(0.1)
+				continue
+			end
+	
+			if hasEnabledPVPTag(targetChar) then break end
+	
+			setTargetNoCollide(targetChar, true)
+	
+			checkFallingDeath()
+			if killAll1Mode and shouldCriticalHeal() then
+				healViaHospital(true)
+			end
+			if hasForceField(targetChar) then
+				waitForForceField()
+			end
+	
+			targetChar = lockedTarget.Character
+			if not targetChar then continue end
+	
+			local targetHum = targetChar:FindFirstChildOfClass("Humanoid")
+			if not targetHum or targetHum.Health <= 0 then
+				killed = true
+				break
+			end
+	
+			local currentHRP = getHRP(targetChar)
+			if currentHRP then
+				if targetHum.Health > STOMP_HEALTH then
+					fastTP(currentHRP, 0, 0, -1, "punch")
+					if os.clock() - lastHitTime >= MIN_HIT_INTERVAL then
+						attackTarget(targetChar, false)
+					end
+				else
+					fastTP(currentHRP, 0, 0, 0, "stomp")
+					equipFist()
+					fireHit(targetChar)
+					fireStomp()
+					if executeStompSequence(targetChar) then
+						killed = true
+						break
+					end
+					targetHum = targetChar:FindFirstChildOfClass("Humanoid")
+					if not targetHum or targetHum.Health <= 0 then
+						killed = true
+						break
+					end
+				end
+			end
+	
+			RunService.RenderStepped:Wait()
+		end
+	
+		local char = lockedTarget and lockedTarget.Character
+		if char then setTargetNoCollide(char, false) end
+		return killed
+	end
+	
+	local mainThread
+	local function start(mode)
+		if running then return end
+		running = true
+		healingCritical = false
+		healingPostStomp = false
+		stompInProgress = false
+		waitingForFF = false
+		lockedTarget = nil
+		lastKilledTarget = nil
+		lastHitTime = 0
+		updateSafePosition()
+	
+		if mode == "killall1" then
+			killAll1Mode = true
+			uiStroke.Color = Color3.fromRGB(255,255,255)
+			killAll1Stroke.Color = Color3.fromRGB(0,255,0)
+		else
+			killAll1Mode = false
+			uiStroke.Color = Color3.fromRGB(0,255,0)
+			killAll1Stroke.Color = Color3.fromRGB(255,255,255)
+		end
+	
+		equipFist()
+		fireSnatch()
+		ensureLocalCollide()
+	
+		mainThread = task.spawn(function()
+			while running do
+				checkFallingDeath()
+				if healingCritical or healingPostStomp or stompInProgress or waitingForFF then
+					RunService.RenderStepped:Wait()
+					continue
+				end
+				if killAll1Mode and shouldCriticalHeal() then
+					healViaHospital(true)
+					continue
+				end
+				if killAll1Mode then
+					local localHRP = getHRP(getCharacter())
+					local targetHRP = lockedTarget and lockedTarget.Character and getHRP(lockedTarget.Character)
+					if localHRP then
+						if targetHRP and isTargetAirborne(targetHRP) then
+							localHRP.AssemblyLinearVelocity = Vector3.new(0, 0, 0)
+						else
+							localHRP.AssemblyLinearVelocity = Vector3.new(0, localHRP.AssemblyLinearVelocity.Y, 0)
+						end
+						localHRP.AssemblyAngularVelocity = Vector3.zero
+					end
+				end
+	
+				local targetChar = acquireTarget()
+				if targetChar then
+					local killed = executeKillSequence()
+					releaseTarget()
+					if killed then
+						if needsHealAfterKill() then
+							healViaHospital(false)
+						end
+					else
+						RunService.RenderStepped:Wait()
+					end
+				else
+					RunService.RenderStepped:Wait()
+				end
+			end
+		end)
+	end
+	
+	local function stop()
+		running = false
+		lockedTarget = nil
+		lastKilledTarget = nil
+		lastHitTime = 0
+		killAll1Mode = false
+		healingCritical = false
+		healingPostStomp = false
+		waitingForFF = false
+		stompInProgress = false
+		clearAllNoCollide()
+		uiStroke.Color = Color3.fromRGB(255,255,255)
+		killAll1Stroke.Color = Color3.fromRGB(255,255,255)
+		if mainThread then task.cancel(mainThread) mainThread = nil end
+	end
+	
+	local function toggle()
+		if running and not killAll1Mode then stop() else stop() start() end
+	end
+	
+	button.MouseButton1Click:Connect(toggle)
+	killAll1Button.MouseButton1Click:Connect(function()
+		if running and killAll1Mode then stop() else stop() start("killall1") end
+	end)
+	
+	LocalPlayer.CharacterAdded:Connect(function(char)
+		if running then
+			task.wait(0.3)
+			local hrp = char:WaitForChild("HumanoidRootPart")
+			hrp.AssemblyLinearVelocity = Vector3.zero
+			hrp.AssemblyAngularVelocity = Vector3.zero
+			ensureLocalCollide()
+			equipFist()
+			updateSafePosition()
+			if killAll1Mode and shouldCriticalHeal() then healViaHospital(true) end
+		end
+	end)
+	
+end
+coroutine.wrap(NIIIAR_fake_script)()
+local function ZTFM_fake_script() -- MiscFrame.SpeedScript 
+	local script = Instance.new('LocalScript', MiscFrame)
+
+	local Players = game:GetService("Players")
+	local RunService = game:GetService("RunService")
+	local UserInputService = game:GetService("UserInputService")
+	
+	local LocalPlayer = Players.LocalPlayer
+	local frame = script.Parent
+	
+	local speedButton = frame:WaitForChild("Speed")
+	local speedBox = speedButton:WaitForChild("SpeedBox")
+	
+	local oldStroke = speedButton:FindFirstChild("UIStroke")
+	
+	if oldStroke then
+		oldStroke:Destroy()
+	end
+	
+	local uiStroke = Instance.new("UIStroke")
+	uiStroke.Parent = speedButton
+	uiStroke.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+	uiStroke.Transparency = 0
+	uiStroke.Thickness = 0.6
+	uiStroke.Color = Color3.fromRGB(255,255,255)
+	
+	local defaultSpeed = 50
+	local speedEnabled = false
+	local connection
+	
+	local function startMoving(character, speed)
+		local HRP = character:WaitForChild("HumanoidRootPart")
+	
+		connection = RunService.RenderStepped:Connect(function(dt)
+			local moveDir = character.Humanoid.MoveDirection
+	
+			if moveDir.Magnitude > 0 then
+				HRP.CFrame =
+					HRP.CFrame +
+					moveDir.Unit * speed * dt
+			end
+		end)
+	end
+	
+	local function stopMoving()
+		if connection then
+			connection:Disconnect()
+			connection = nil
+		end
+	end
+	
+	local function toggleSpeed()
+		local num = tonumber(speedBox.Text)
+	
+		local targetSpeed = num or defaultSpeed
+	
+		speedEnabled = not speedEnabled
+	
+		local character = LocalPlayer.Character
+	
+		if character
+			and character:FindFirstChild("Humanoid")
+			and character:FindFirstChild("HumanoidRootPart") then
+	
+			if speedEnabled then
+				uiStroke.Color = Color3.fromRGB(0,255,0)
+	
+				startMoving(character, targetSpeed)
+			else
+				uiStroke.Color = Color3.fromRGB(255,255,255)
+	
+				stopMoving()
+			end
+		end
+	end
+	
+	speedButton.MouseButton1Click:Connect(toggleSpeed)
+	
+	UserInputService.InputBegan:Connect(function(input, gp)
+		if gp then
+			return
+		end
+	
+		if _G.keybindsBlocked then
+			return
+		end
+	
+		if input.KeyCode == Enum.KeyCode.Z then
+			toggleSpeed()
+		end
+	end)
+	
+	LocalPlayer.CharacterAdded:Connect(function()
+		stopMoving()
+	
+		speedEnabled = false
+	
+		uiStroke.Color = Color3.fromRGB(255,255,255)
+	end)
+end
+coroutine.wrap(ZTFM_fake_script)()
+local function DUNTYM_fake_script() -- MiscFrame.FlyScript 
+	local script = Instance.new('LocalScript', MiscFrame)
+
+	local Players = game:GetService("Players")
+	local UserInputService = game:GetService("UserInputService")
+	local RunService = game:GetService("RunService")
+	
+	local LocalPlayer = Players.LocalPlayer
+	local Camera = workspace.CurrentCamera
+	
+	local frame = script.Parent
+	local flyButton = frame:WaitForChild("Fly")
+	local flySpeedBox = flyButton:WaitForChild("FlySpeedBox")
+	
+	local oldStroke = flyButton:FindFirstChild("UIStroke")
+	
+	if oldStroke then
+		oldStroke:Destroy()
+	end
+	
+	local uiStroke = Instance.new("UIStroke")
+	uiStroke.Parent = flyButton
+	uiStroke.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+	uiStroke.Transparency = 0
+	uiStroke.Thickness = 0.6
+	uiStroke.Color = Color3.fromRGB(255,255,255)
+	
+	local SPEED = 50
+	local ACCEL = 12
+	local TURN_SPEED = 14
+	local Flying = false
+	local Keys = {
+		W = false,
+		A = false,
+		S = false,
+		D = false
+	}
+	
+	local FlyConnection
+	local FlyPhysicsConnection
+	local CurrentVel = Vector3.zero
+	local CurrentYaw = 0
+	local HoldY = nil
+	
+	local Humanoid
+	local HRP
+	
+	local BLOCKED_STATES = {
+		Enum.HumanoidStateType.FallingDown,
+		Enum.HumanoidStateType.Freefall,
+		Enum.HumanoidStateType.Ragdoll,
+		Enum.HumanoidStateType.Physics,
+	}
+	
+	local function inputAllowed()
+		if _G.keybindsBlocked then
+			return false
+		end
+	
+		return UserInputService:GetFocusedTextBox() == nil
+	end
+	
+	local function getSpeed()
+		local v = tonumber(flySpeedBox.Text)
+	
+		if v and v > 0 then
+			return v
+		end
+	
+		return 50
+	end
+	
+	local function clearKeys()
+		Keys.W = false
+		Keys.A = false
+		Keys.S = false
+		Keys.D = false
+	end
+	
+	local function flatLook()
+		local look = Camera.CFrame.LookVector
+		local flat = Vector3.new(look.X, 0, look.Z)
+	
+		if flat.Magnitude < 0.01 then
+			return Vector3.new(0, 0, -1)
+		end
+	
+		return flat.Unit
+	end
+	
+	local function getMoveVector()
+		local cam = Camera.CFrame
+		local move = Vector3.zero
+	
+		if Keys.W then
+			move = move + cam.LookVector
+		end
+	
+		if Keys.S then
+			move = move - cam.LookVector
+		end
+	
+		if Keys.A then
+			move = move - cam.RightVector
+		end
+	
+		if Keys.D then
+			move = move + cam.RightVector
+		end
+	
+		if move.Magnitude > 0 then
+			return move.Unit
+		end
+	
+		return Vector3.zero
+	end
+	
+	local function getFlyPart()
+		local seat = Humanoid and Humanoid.SeatPart
+	
+		if seat and (seat:IsA("VehicleSeat") or seat:IsA("Seat")) then
+			local model = seat:FindFirstAncestorOfClass("Model")
+			return model and model.PrimaryPart or seat
+		end
+	
+		return HRP
+	end
+	
+	local function applyVelocity(vel)
+		local part = getFlyPart()
+	
+		if not part then
+			return
+		end
+	
+		part.AssemblyLinearVelocity = vel
+		part.AssemblyAngularVelocity = Vector3.zero
+	end
+	
+	local function lockHeight(y)
+		if not HRP then
+			return
+		end
+	
+		local rot = HRP.CFrame - HRP.CFrame.Position
+	
+		HRP.CFrame = CFrame.new(HRP.Position.X, y, HRP.Position.Z) * rot
+	
+		applyVelocity(Vector3.zero)
+	end
+	
+	local function setFallStates(enabled)
+		if not Humanoid then
+			return
+		end
+	
+		for _, state in ipairs(BLOCKED_STATES) do
+			Humanoid:SetStateEnabled(state, enabled)
+		end
+	end
+	
+	local function stopFlyLoop()
+		if FlyConnection then
+			FlyConnection:Disconnect()
+			FlyConnection = nil
+		end
+	
+		if FlyPhysicsConnection then
+			FlyPhysicsConnection:Disconnect()
+			FlyPhysicsConnection = nil
+		end
+	end
+	
+	local function resetFly()
+		Flying = false
+	
+		stopFlyLoop()
+	
+		clearKeys()
+	
+		CurrentVel = Vector3.zero
+		HoldY = nil
+	
+		if Humanoid and Humanoid.Parent then
+			Humanoid.PlatformStand = false
+			Humanoid.AutoRotate = true
+	
+			setFallStates(true)
+	
+			Humanoid:ChangeState(Enum.HumanoidStateType.Freefall)
+		end
+	
+		if HRP and HRP.Parent then
+			applyVelocity(Vector3.zero)
+		end
+	end
+	
+	local function startFly()
+		if Flying or not HRP or not Humanoid then
+			return
+		end
+	
+		Flying = true
+		HoldY = nil
+		SPEED = getSpeed()
+		CurrentVel = Vector3.zero
+	
+		CurrentYaw =
+			math.atan2(
+				-HRP.CFrame.LookVector.X,
+				-HRP.CFrame.LookVector.Z
+			)
+	
+		Humanoid.PlatformStand = true
+		Humanoid.AutoRotate = false
+	
+		setFallStates(false)
+	
+		local function flyStep(dt)
+			if not Flying or not HRP or not Humanoid then
+				return
+			end
+	
+			local move = getMoveVector()
+	
+			local alpha = math.clamp(ACCEL * dt, 0, 1)
+	
+			if move.Magnitude > 0 then
+				HoldY = nil
+	
+				local targetVel = move * SPEED
+	
+				CurrentVel = CurrentVel:Lerp(targetVel, alpha)
+	
+				applyVelocity(CurrentVel)
+	
+				local look = flatLook()
+	
+				local targetYaw =
+					math.atan2(
+						-look.X,
+						-look.Z
+					)
+	
+				local diff =
+					math.atan2(
+						math.sin(targetYaw - CurrentYaw),
+						math.cos(targetYaw - CurrentYaw)
+					)
+	
+				CurrentYaw =
+					CurrentYaw +
+					(diff * math.clamp(TURN_SPEED * dt, 0, 1))
+	
+				HRP.CFrame =
+					CFrame.new(HRP.Position) *
+					CFrame.Angles(0, CurrentYaw, 0)
+			else
+				if not HoldY then
+					HoldY = HRP.Position.Y
+				end
+	
+				CurrentVel = Vector3.zero
+	
+				lockHeight(HoldY)
+			end
+		end
+	
+		FlyConnection = RunService.RenderStepped:Connect(flyStep)
+	
+		FlyPhysicsConnection = RunService.PostSimulation:Connect(function()
+			if not Flying then
+				return
+			end
+	
+			if getMoveVector().Magnitude > 0 then
+				applyVelocity(CurrentVel)
+			elseif HoldY then
+				lockHeight(HoldY)
+			end
+		end)
+	end
+	
+	local function toggleFly()
+		SPEED = getSpeed()
+	
+		if Flying then
+			resetFly()
+	
+			uiStroke.Color = Color3.fromRGB(255,255,255)
+		else
+			if not HRP or not Humanoid then
+				return
+			end
+	
+			startFly()
+	
+			uiStroke.Color = Color3.fromRGB(0,255,0)
+		end
+	end
+	
+	local function setKey(key, down)
+		if not inputAllowed() and not Flying then
+			return
+		end
+	
+		Keys[key] = down
+	end
+	
+	UserInputService.InputBegan:Connect(function(input, gp)
+		if gp then
+			return
+		end
+	
+		local k = input.KeyCode
+	
+		if k == Enum.KeyCode.X then
+			if inputAllowed() then
+				toggleFly()
+			end
+		elseif k == Enum.KeyCode.W then
+			setKey("W", true)
+		elseif k == Enum.KeyCode.A then
+			setKey("A", true)
+		elseif k == Enum.KeyCode.S then
+			setKey("S", true)
+		elseif k == Enum.KeyCode.D then
+			setKey("D", true)
+		end
+	end)
+	
+	UserInputService.InputEnded:Connect(function(input, gp)
+		if gp then
+			return
+		end
+	
+		local k = input.KeyCode
+	
+		if k == Enum.KeyCode.W then
+			setKey("W", false)
+		elseif k == Enum.KeyCode.A then
+			setKey("A", false)
+		elseif k == Enum.KeyCode.S then
+			setKey("S", false)
+		elseif k == Enum.KeyCode.D then
+			setKey("D", false)
+		end
+	end)
+	
+	flyButton.MouseButton1Click:Connect(function()
+		-- Always allow toggling with the button
+		toggleFly()
+	end)
+	
+	local function onCharacter(char)
+		resetFly()
+	
+		Humanoid = char:WaitForChild("Humanoid")
+		HRP = char:WaitForChild("HumanoidRootPart")
+	
+		uiStroke.Color = Color3.fromRGB(255,255,255)
+	end
+	
+	if LocalPlayer.Character then
+		onCharacter(LocalPlayer.Character)
+	end
+	
+	LocalPlayer.CharacterAdded:Connect(onCharacter)
+end
+coroutine.wrap(DUNTYM_fake_script)()
+local function MFNJCBT_fake_script() -- CopyText.LocalScript 
+	local script = Instance.new('LocalScript', CopyText)
+
+	local button = script.Parent
+	
+	local oldStroke = button:FindFirstChild("UIStroke")
+	
+	if oldStroke then
+		oldStroke:Destroy()
+	end
+	
+	local uiStroke = Instance.new("UIStroke")
+	uiStroke.Parent = button
+	uiStroke.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+	uiStroke.Transparency = 0
+	uiStroke.Thickness = 0.6
+	uiStroke.Color = Color3.fromRGB(255,255,255)
+	
+	button.MouseButton1Click:Connect(function()
+		if setclipboard then
+			setclipboard("https://discord.gg/rm7tpnhFfb")
+	
+			uiStroke.Color = Color3.fromRGB(0,255,0)
+	
+			task.wait(0.5)
+	
+			uiStroke.Color = Color3.fromRGB(255,255,255)
+		end
+	end)
+end
+coroutine.wrap(MFNJCBT_fake_script)()
+local function TGTYRKJ_fake_script() -- Noclip.LocalScript 
+	local script = Instance.new('LocalScript', Noclip)
+
+	local Players = game:GetService("Players")
+	local RunService = game:GetService("RunService")
+	local UserInputService = game:GetService("UserInputService")
+	
+	local LocalPlayer = Players.LocalPlayer
+	local button = script.Parent
+	
+	local oldStroke = button:FindFirstChild("UIStroke")
+	
+	if oldStroke then
+		oldStroke:Destroy()
+	end
+	
+	local uiStroke = Instance.new("UIStroke")
+	uiStroke.Parent = button
+	uiStroke.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+	uiStroke.Transparency = 0
+	uiStroke.Thickness = 0.6
+	uiStroke.Color = Color3.fromRGB(255,255,255)
+	
+	local noclip = false
+	local connection
+	local modifiedParts = {}
+	local charStates = {}
+	local bodyParts = {}
+	local protected = {}
+	local doneModels = {}
+	
+	local overlapParams = OverlapParams.new()
+	overlapParams.FilterType = Enum.RaycastFilterType.Blacklist
+	
+	local rayParams = RaycastParams.new()
+	rayParams.FilterType = Enum.RaycastFilterType.Blacklist
+	
+	local FEET_TOLERANCE = 0.5
+	
+	local FLOOR_NAMES = {
+		"floor", "ground", "baseplate", "road", "path",
+		"sidewalk", "pavement", "walkway", "tile", "concrete",
+	}
+	
+	local function isFloorName(part)
+		local name = part.Name:lower()
+		for _, key in ipairs(FLOOR_NAMES) do
+			if name:find(key) then
+				return true
+			end
+		end
+		return false
+	end
+	
+	local function refreshBody(char)
+		table.clear(bodyParts)
+		local hrp = char:FindFirstChild("HumanoidRootPart")
+		if hrp then bodyParts[1] = hrp end
+		local torso = char:FindFirstChild("UpperTorso") or char:FindFirstChild("Torso")
+		if torso then bodyParts[#bodyParts + 1] = torso end
+		local head = char:FindFirstChild("Head")
+		if head then bodyParts[#bodyParts + 1] = head end
+	end
+	
+	local function buildProtected(char, hrp, hum)
+		table.clear(protected)
+		if not hrp then return end
+	
+		local feetY = hrp.Position.Y - hrp.Size.Y * 0.5 - (hum and hum.HipHeight or 2)
+		local hrpPos = hrp.Position
+	
+		rayParams.FilterDescendantsInstances = { char }
+		local hits = {
+			workspace:Raycast(hrpPos, Vector3.new(0, -8, 0), rayParams),
+			workspace:Spherecast(hrpPos, 1, Vector3.new(0, -8, 0), rayParams),
+			workspace:Raycast(hrpPos + hrp.CFrame.RightVector * 1.5, Vector3.new(0, -8, 0), rayParams),
+			workspace:Raycast(hrpPos - hrp.CFrame.RightVector * 1.5, Vector3.new(0, -8, 0), rayParams),
+		}
+	
+		for _, hit in ipairs(hits) do
+			if hit and hit.Instance and hit.Instance:IsA("BasePart") and hit.Normal.Y > 0.5 then
+				protected[hit.Instance] = true
+			end
+		end
+	
+		for _, inst in ipairs(workspace:GetPartBoundsInRadius(hrpPos, 6, overlapParams)) do
+			if inst:IsA("BasePart") and not inst:IsDescendantOf(char) then
+				if inst:IsA("Terrain") or isFloorName(inst) then
+					local topY = (inst.CFrame * CFrame.new(0, inst.Size.Y * 0.5, 0)).Position.Y
+					if math.abs(topY - feetY) <= FEET_TOLERANCE + 0.3 then
+						local localPos = inst.CFrame:PointToObjectSpace(hrpPos)
+						local half = inst.Size * 0.5
+						if math.abs(localPos.X) <= half.X + 2 and math.abs(localPos.Z) <= half.Z + 2 then
+							protected[inst] = true
+						end
+					end
+				end
+			end
+		end
+	end
+	
+	local function isProtected(part)
+		return protected[part] == true
+	end
+	
+	local function rememberAndDisable(part)
+		if not part:IsA("BasePart") or isProtected(part) then
+			return
+		end
+		if modifiedParts[part] == nil then
+			modifiedParts[part] = part.CanCollide
+		end
+		part.CanCollide = false
+	end
+	
+	local function disableModel(part, char)
+		local model = part:FindFirstAncestorOfClass("Model")
+		if not model or model == workspace or model == char or doneModels[model] then
+			return
+		end
+		doneModels[model] = true
+		for _, p in ipairs(model:GetDescendants()) do
+			if p:IsA("BasePart") and not p:IsDescendantOf(char) then
+				rememberAndDisable(p)
+			end
+		end
+	end
+	
+	local function markPart(part, char)
+		if not part:IsA("BasePart") or part:IsDescendantOf(char) or isProtected(part) then
+			return
+		end
+		rememberAndDisable(part)
+		disableModel(part, char)
+	end
+	
+	local function setCharNoclip(char, enabled)
+		for _, p in ipairs(char:GetDescendants()) do
+			if p:IsA("BasePart") then
+				if enabled then
+					if charStates[p] == nil then
+						charStates[p] = p.CanCollide
+					end
+					p.CanCollide = false
+				elseif charStates[p] ~= nil then
+					p.CanCollide = charStates[p]
+					charStates[p] = nil
+				end
+			end
+		end
+	end
+	
+	local function restoreAll()
+		if connection then
+			connection:Disconnect()
+			connection = nil
+		end
+	
+		local char = LocalPlayer.Character
+		if char then
+			setCharNoclip(char, false)
+		end
+	
+		for part, original in pairs(modifiedParts) do
+			if part and part.Parent then
+				part.CanCollide = original
+			end
+		end
+		table.clear(modifiedParts)
+		table.clear(charStates)
+		table.clear(doneModels)
+	end
+	
+	local function updateNoclip()
+		local char = LocalPlayer.Character
+		if not char then return end
+	
+		local hrp = char:FindFirstChild("HumanoidRootPart")
+		local hum = char:FindFirstChildOfClass("Humanoid")
+		if not hrp then return end
+	
+		if #bodyParts == 0 then
+			refreshBody(char)
+		end
+	
+		overlapParams.FilterDescendantsInstances = { char }
+		buildProtected(char, hrp, hum)
+		table.clear(doneModels)
+	
+		setCharNoclip(char, true)
+	
+		for i = 1, #bodyParts do
+			local bp = bodyParts[i]
+			for _, p in ipairs(workspace:GetPartsInPart(bp, overlapParams)) do
+				markPart(p, char)
+			end
+			local ok, touches = pcall(bp.GetTouchingParts, bp)
+			if ok then
+				for j = 1, #touches do
+					markPart(touches[j], char)
+				end
+			end
+		end
+	
+		rayParams.FilterDescendantsInstances = { char }
+		local cf = hrp.CFrame
+		local dirs = {
+			cf.LookVector, -cf.LookVector, cf.RightVector, -cf.RightVector,
+			Vector3.yAxis, -Vector3.yAxis,
+		}
+		local move = hum and hum.MoveDirection
+		if move and move.Magnitude > 0.05 then
+			dirs[1] = move.Unit
+		end
+		local pos = hrp.Position
+		for i = 1, #dirs do
+			local hit = workspace:Raycast(pos, dirs[i] * 9, rayParams)
+			if hit then markPart(hit.Instance, char) end
+			local sphere = workspace:Spherecast(pos, 2.5, dirs[i] * 8, rayParams)
+			if sphere then markPart(sphere.Instance, char) end
+		end
+	
+		for part, original in pairs(modifiedParts) do
+			if part.Parent and not isProtected(part) then
+				part.CanCollide = false
+			end
+		end
+	end
+	
+	local function toggleNoclip()
+		noclip = not noclip
+		if noclip then
+			uiStroke.Color = Color3.fromRGB(0, 255, 0)
+			connection = RunService.RenderStepped:Connect(updateNoclip)
+			for _ = 1, 3 do updateNoclip() end
+		else
+			noclip = false
+			uiStroke.Color = Color3.fromRGB(255, 255, 255)
+			restoreAll()
+			task.defer(restoreAll)
+		end
+	end
+	
+	button.MouseButton1Click:Connect(toggleNoclip)
+	
+	UserInputService.InputBegan:Connect(function(input, g)
+		if g then return end
+		if _G.keybindsBlocked then return end
+		if input.KeyCode == Enum.KeyCode.C then
+			toggleNoclip()
+		end
+	end)
+	
+	LocalPlayer.CharacterAdded:Connect(function(char)
+		restoreAll()
+		table.clear(bodyParts)
+		refreshBody(char)
+		noclip = false
+		uiStroke.Color = Color3.fromRGB(255, 255, 255)
+	end)
+	
+end
+coroutine.wrap(TGTYRKJ_fake_script)()
+local function ISDITN_fake_script() -- DisableKeyBinds.LocalScript 
+	local script = Instance.new('LocalScript', DisableKeyBinds)
+
+	local miscButton = script.Parent
+	
+	local oldStroke = miscButton:FindFirstChild("UIStroke")
+	
+	if oldStroke then
+		oldStroke:Destroy()
+	end
+	
+	local uiStroke = Instance.new("UIStroke")
+	uiStroke.Parent = miscButton
+	uiStroke.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+	uiStroke.Transparency = 0
+	uiStroke.Thickness = 0.6
+	uiStroke.Color = Color3.fromRGB(255,255,255)
+	
+	_G.keybindsBlocked = false
+	
+	local function toggleBlock()
+		_G.keybindsBlocked = not _G.keybindsBlocked
+	
+		if _G.keybindsBlocked then
+			uiStroke.Color = Color3.fromRGB(0,255,0)
+		else
+			uiStroke.Color = Color3.fromRGB(255,255,255)
+		end
+	end
+	
+	miscButton.MouseButton1Click:Connect(toggleBlock)
+end
+coroutine.wrap(ISDITN_fake_script)()
+local function REID_fake_script() -- AntiAfk.LocalScript 
+	local script = Instance.new('LocalScript', AntiAfk)
+
+	local Players = game:GetService("Players")
+	local VirtualUser = game:GetService("VirtualUser")
+	
+	local player = Players.LocalPlayer
+	local button = script.Parent
+	
+	local oldStroke = button:FindFirstChild("UIStroke")
+	
+	if oldStroke then
+		oldStroke:Destroy()
+	end
+	
+	local uiStroke = Instance.new("UIStroke")
+	uiStroke.Parent = button
+	uiStroke.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+	uiStroke.Transparency = 0
+	uiStroke.Thickness = 0.6
+	uiStroke.Color = Color3.fromRGB(255,255,255)
+	
+	local antiAFKEnabled = false
+	
+	player.Idled:Connect(function()
+		if antiAFKEnabled then
+			VirtualUser:Button2Down(
+				Vector2.new(0,0),
+				workspace.CurrentCamera.CFrame
+			)
+	
+			task.wait(1)
+	
+			VirtualUser:Button2Up(
+				Vector2.new(0,0),
+				workspace.CurrentCamera.CFrame
+			)
+		end
+	end)
+	
+	button.MouseButton1Click:Connect(function()
+		antiAFKEnabled = not antiAFKEnabled
+	
+		if antiAFKEnabled then
+			uiStroke.Color = Color3.fromRGB(0,255,0)
+		else
+			uiStroke.Color = Color3.fromRGB(255,255,255)
+		end
+	end)
+end
+coroutine.wrap(REID_fake_script)()
+local function KPGVVG_fake_script() -- AutoWheel.LocalScript 
+	local script = Instance.new('LocalScript', AutoWheel)
+
+	local Players = game:GetService("Players")
+	local ReplicatedStorage = game:GetService("ReplicatedStorage")
+	local player = Players.LocalPlayer
+	local button = script.Parent
+	local WeaponSpinEvent = ReplicatedStorage.Event
+	
+	local oldStroke = button:FindFirstChild("UIStroke")
+	if oldStroke then
+		oldStroke:Destroy()
+	end
+	
+	local uiStroke = Instance.new("UIStroke")
+	uiStroke.Parent = button
+	uiStroke.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+	uiStroke.Transparency = 0
+	uiStroke.Thickness = 0.6
+	uiStroke.Color = Color3.fromRGB(255, 255, 255)
+	
+	local spamEnabled = false
+	task.spawn(function()
+		while task.wait(0.05) do
+			if spamEnabled then
+				WeaponSpinEvent:FireServer({Event = "SpinWeaponWheel"})
+			end
+		end
+	end)
+	
+	button.MouseButton1Click:Connect(function()
+		spamEnabled = not spamEnabled
+		uiStroke.Color = if spamEnabled then Color3.fromRGB(0, 255, 0) else Color3.fromRGB(255, 255, 255)
+	end)
+end
+coroutine.wrap(KPGVVG_fake_script)()
+local function KQRZOG_fake_script() -- AutoWheel_2.LocalScript 
+	local script = Instance.new('LocalScript', AutoWheel_2)
+
+	local Players = game:GetService("Players")
+	local ReplicatedStorage = game:GetService("ReplicatedStorage")
+	local player = Players.LocalPlayer
+	local button = script.Parent
+	local SpinPinkyEvent = ReplicatedStorage.Event
+	
+	local oldStroke = button:FindFirstChild("UIStroke")
+	if oldStroke then
+		oldStroke:Destroy()
+	end
+	
+	local uiStroke = Instance.new("UIStroke")
+	uiStroke.Parent = button
+	uiStroke.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+	uiStroke.Transparency = 0
+	uiStroke.Thickness = 0.6
+	uiStroke.Color = Color3.fromRGB(255, 255, 255)
+	
+	local spamEnabled = false
+	task.spawn(function()
+		while task.wait(0.05) do
+			if spamEnabled then
+				SpinPinkyEvent:FireServer({Event = "SpinPinkyWheel"})
+			end
+		end
+	end)
+	
+	button.MouseButton1Click:Connect(function()
+		spamEnabled = not spamEnabled
+		uiStroke.Color = if spamEnabled then Color3.fromRGB(0, 255, 0) else Color3.fromRGB(255, 255, 255)
+	end)
+end
+coroutine.wrap(KQRZOG_fake_script)()
+local function SPXB_fake_script() -- BuyFrame.LocalScript 
+	local script = Instance.new('LocalScript', BuyFrame)
+
+	local Players = game:GetService("Players")
+	local ReplicatedStorage = game:GetService("ReplicatedStorage")
+	local Workspace = game:GetService("Workspace")
+	
+	local LocalPlayer = Players.LocalPlayer
+	local buttonParent = script.Parent
+	
+	local Event = ReplicatedStorage:WaitForChild("Event")
+	local list1Button = buttonParent:FindFirstChild("List1")
+	
+	local function getPriceFromPrompt(part, promptType)
+		for _, child in ipairs(part:GetDescendants()) do
+			if child:IsA("Attachment") then
+				local prompt = child:FindFirstChild(promptType)
+				if prompt and prompt:IsA("ProximityPrompt") then
+					return prompt.ObjectText
+				end
+			end
+		end
+		return nil
+	end
+	
+	local function createPurchaseButton(toolPart, price, eventType, toolPath)
+		if not list1Button then
+			return
+		end
+	
+		local button = list1Button:Clone()
+		button.Name = toolPart.Name
+		button.Text = toolPart.Name .. " - " .. (price or "Unknown")
+		button.Visible = true
+		button.Parent = buttonParent
+	
+		button.MouseButton1Click:Connect(function()
+			local args = {
+				{
+					Event = eventType,
+					[eventType == "PurchaseFood" and "Food" or "Tool"] = toolPath
+				}
+			}
+			Event:FireServer(unpack(args))
+		end)
+	end
+	
+	local function processFolder(folder, eventType, promptType)
+		local map = Workspace:FindFirstChild("Map")
+		if not map then
+			return
+		end
+	
+		local purchasable = map:FindFirstChild("Purchasable")
+		if not purchasable then
+			return
+		end
+	
+		local targetFolder = purchasable:FindFirstChild(folder)
+		if not targetFolder then
+			return
+		end
+	
+		for _, obj in ipairs(targetFolder:GetChildren()) do
+			if obj:IsA("BasePart") or obj:IsA("Model") then
+				local price = getPriceFromPrompt(obj, promptType)
+				if price then
+					createPurchaseButton(obj, price, eventType, obj)
+				end
+			end
+		end
+	end
+	
+	processFolder("Tool", "PurchaseTool", "PurchaseTool")
+	processFolder("Food", "PurchaseFood", "Food")
+	
+	if list1Button then
+		list1Button.Visible = false
+	end
+	
+end
+coroutine.wrap(SPXB_fake_script)()
