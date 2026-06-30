@@ -55,6 +55,5 @@ local originalInstanceNew = hookfunction(Instance.new, newcclosure(function(clas
         end
     end
 
-    -- Let all legitimate Instance.new() calls run normally
     return originalInstanceNew(className, parent)
 end))
