@@ -1,0 +1,59 @@
+local ReplicatedStorage = game:GetService("ReplicatedStorage")
+local Players = game:GetService("Players")
+local LocalPlayer = Players.LocalPlayer
+
+local targetRemote = ReplicatedStorage:FindFirstChild("Event")
+
+local originalNamecall
+originalNamecall = hookmetamethod(game, "__namecall", newcclosure(function(self, ...)
+    local success, method = pcall(getnamecallmethod)
+    if not success or not method then
+        return originalNamecall(self, ...)
+    end
+    local lowerMethod = string.lower(method)
+
+    if self == LocalPlayer and lowerMethod == "kick" then
+        return nil
+    end
+
+    if targetRemote and self == targetRemote and lowerMethod == "fireserver" then
+        local args = {...}
+        for _, arg in ipairs(args) do
+            if type(arg) == "table" then
+                for _, value in pairs(arg) do
+                    if type(value) == "string" and value:find("★") then
+                        return nil
+                    end
+                end
+            elseif type(arg) == "string" and arg:find("★") then
+                return nil
+            end
+        end
+    end
+
+    return originalNamecall(self, ...)
+end))
+
+local partCreationCount = 0
+local lastPartReset = os.clock()
+
+local originalInstanceNew = hookfunction(Instance.new, newcclosure(function(className, parent)
+    if className == "Part" then
+        local now = os.clock()
+        
+        if now - lastPartReset >= 1 then
+            partCreationCount = 0
+            lastPartReset = now
+        end
+
+        if partCreationCount >= 10 then
+            return nil
+        end
+
+        if parent == workspace then
+            partCreationCount += 1
+        end
+    end
+
+    return originalInstanceNew(className, parent)
+end))
