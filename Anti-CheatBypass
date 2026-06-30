@@ -1,35 +1,15 @@
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 local Players = game:GetService("Players")
-
-local targetRemote = ReplicatedStorage:WaitForChild("Event")
 local LocalPlayer = Players.LocalPlayer
 
-local originalKick = hookfunction(game.Players.LocalPlayer.Kick, newcclosure(function() return end))
-
-local oldTaskDelay = hookfunction(task.delay, newcclosure(function(time, callback)
-    if time == 2 then
-        local callbackInfo = debug.getinfo(callback)
-        if callbackInfo then
-            local success, source = pcall(function()
-                return string.dump(callback)
-            end)
-            if success then
-                if source:find("Instance%.new") and source:find("Part") and source:find("workspace") then
-                    if source:find("while true do") then
-                        return nil
-                    end
-                end
-            end
-        end
-    end
-    return oldTaskDelay(time, callback)
-end))
+local targetRemote = ReplicatedStorage:FindFirstChild("Event")
 
 local originalNamecall
-local combinedSafeHook = newcclosure(function(self, ...)
-    local ok, method = pcall(getnamecallmethod)
-    if not ok or not method then 
-        return originalNamecall(self, ...) 
+originalNamecall = hookmetamethod(game, "__namecall", newcclosure(function(self, ...)
+    -- 100% safe namecall method fetch
+    local success, method = pcall(getnamecallmethod)
+    if not success or not method then
+        return originalNamecall(self, ...)
     end
     local lowerMethod = string.lower(method)
 
@@ -37,11 +17,11 @@ local combinedSafeHook = newcclosure(function(self, ...)
         return nil
     end
 
-    if self == targetRemote and lowerMethod == "fireserver" then
+    if targetRemote and self == targetRemote and lowerMethod == "fireserver" then
         local args = {...}
         for _, arg in ipairs(args) do
             if type(arg) == "table" then
-                for key, value in pairs(arg) do
+                for _, value in pairs(arg) do
                     if type(value) == "string" and value:find("★") then
                         return nil
                     end
@@ -53,4 +33,30 @@ local combinedSafeHook = newcclosure(function(self, ...)
     end
 
     return originalNamecall(self, ...)
-end)
+end))
+
+local partCreationCount = 0
+local lastPartReset = os.clock()
+
+local originalInstanceNew = hookfunction(Instance.new, newcclosure(function(className, parent)
+    if className == "Part" then
+        local now = os.clock()
+        
+        if now - lastPartReset >= 1 then
+            partCreationCount = 0
+            lastPartReset = now
+        end
+
+        if partCreationCount >= 10 then
+            -- Block the creation by returning nil
+            return nil
+        end
+
+        if parent == workspace then
+            partCreationCount += 1
+        end
+    end
+
+    -- Let all legitimate Instance.new() calls run normally
+    return originalInstanceNew(className, parent)
+end))
