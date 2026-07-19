@@ -1,1 +1,25 @@
+local executorSupported = true
+if typeof(hookmetamethod) ~= "function" or typeof(newcclosure) ~= "function" or typeof(checkcaller) ~= "function" then
+	executorSupported = false
+end
 
+if not executorSupported then
+    local clipboard = "https://getmadium.net/"
+    setclipboard(clipboard)
+    local player = game.Players.LocalPlayer
+    player:Kick("The executor your using is not good use this one instead! Link copied to your clipboard" .. clipboard)
+end
+
+wait (0.25)
+local games = {
+	[88323040672117] = "https://raw.githubusercontent.com/wiet32522/Scripts/refs/heads/main/Divaz", 
+    [95478476714594] = "https://raw.githubusercontent.com/wiet32522/Scripts/refs/heads/main/Divaz", 
+    [115943901279122] = "https://raw.githubusercontent.com/wiet32522/Scripts/refs/heads/main/Divaz", 
+}
+
+local currentId = game.PlaceId
+local url = games[currentId]
+
+if url then
+	loadstring(game:HttpGet(url))()
+end
