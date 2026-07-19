@@ -12,9 +12,9 @@ end
 
 wait (0.25)
 local games = {
-	[88323040672117] = "https://raw.githubusercontent.com/wiet32522/Scripts/refs/heads/main/Divaz", 
-    [95478476714594] = "https://raw.githubusercontent.com/wiet32522/Scripts/refs/heads/main/Divaz", 
-    [115943901279122] = "https://raw.githubusercontent.com/wiet32522/Scripts/refs/heads/main/Divaz", 
+	[88323040672117] = "https://raw.githubusercontent.com/wiet32522/Scripts/refs/heads/main/divaz", 
+    [95478476714594] = "https://raw.githubusercontent.com/wiet32522/Scripts/refs/heads/main/divaz", 
+    [115943901279122] = "https://raw.githubusercontent.com/wiet32522/Scripts/refs/heads/main/divaz", 
 }
 
 local currentId = game.PlaceId
