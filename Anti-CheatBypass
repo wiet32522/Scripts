@@ -1,1 +1,5 @@
-Nothing to find here
+for _, obj in ipairs(game:GetDescendants()) do
+	if obj:IsA("LocalScript") and #obj.Name >= 20 then
+		obj.Disabled = true
+	end
+end
