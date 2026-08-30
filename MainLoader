@@ -13,6 +13,7 @@ end
 wait (0.25)
 local games = {
 	[88323040672117] = "https://raw.githubusercontent.com/wiet32522/Scripts/refs/heads/main/divazz", 
+    [115903978623312] = "https://raw.githubusercontent.com/wiet32522/Scripts/refs/heads/main/Edenville",
     [95478476714594] = "https://raw.githubusercontent.com/wiet32522/Scripts/refs/heads/main/divazz", 
     [115943901279122] = "https://raw.githubusercontent.com/wiet32522/Scripts/refs/heads/main/divazz", 
     [112988311795791] = "https://raw.githubusercontent.com/wiet32522/Scripts/refs/heads/main/divazz", 
