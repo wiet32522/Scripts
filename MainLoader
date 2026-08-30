@@ -1,2 +1,2 @@
-setclipboard("https://wiethub.best/mainloader")
-game.Players.LocalPlayer:Kick("https://wiethub.best/mainloader copied to your clipboard")
+setclipboard("https://wiethub.best/loader")
+game.Players.LocalPlayer:Kick("https://wiethub.best/loader copied to your clipboard")
