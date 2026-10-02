@@ -4015,48 +4015,50 @@ function Library:CreateWindow(...)
         Parent = ScreenGui;
     });
     function Library:Toggle()
-        Library.Toggled = not Library.Toggled;
-        ModalElement.Modal = Library.Toggled;
-        Outer.Visible = Library.Toggled;
-        if Library.Toggled then
-            task.spawn(function()
-                local State = InputService.MouseIconEnabled;
-                local GuiService = game:GetService("GuiService");
+    Library.Toggled = not Library.Toggled;
+    ModalElement.Modal = Library.Toggled;
+    Outer.Visible = Library.Toggled;
 
-                local Cursor = Instance.new("ImageLabel", ScreenGui);
-                Cursor.Image = "http://www.roblox.com/asset/?id=4292970642";
-                Cursor.BackgroundTransparency = 1;
-                Cursor.ZIndex = 100;
+    if Library.Toggled then
+        task.spawn(function()
+            local State = InputService.MouseIconEnabled;
+            local GuiService = game:GetService("GuiService");
 
-                local CursorOutline = Instance.new("ImageLabel", ScreenGui);
-                CursorOutline.Image = "http://www.roblox.com/asset/?id=4292970642";
-                CursorOutline.ImageColor3 = Color3.new();
-                CursorOutline.BackgroundTransparency = 1;
-                CursorOutline.ZIndex = 99;
+            local Cursor = Instance.new("ImageLabel", ScreenGui);
+            Cursor.Image = "http://www.roblox.com/asset/?id=4292970642";
+            Cursor.BackgroundTransparency = 1;
+            Cursor.ZIndex = 100;
 
-                Cursor.Size, CursorOutline.Size = UDim2.fromOffset(17, 17), UDim2.fromOffset(19, 19);
-                Cursor.Rotation, CursorOutline.Rotation = -45, -45;
+            local CursorOutline = Instance.new("ImageLabel", ScreenGui);
+            CursorOutline.Image = "http://www.roblox.com/asset/?id=4292970642";
+            CursorOutline.ImageColor3 = Color3.new();
+            CursorOutline.BackgroundTransparency = 1;
+            CursorOutline.ZIndex = 99;
 
-                while Library.Toggled and ScreenGui.Parent do
-                    InputService.MouseIconEnabled = false;
+            Cursor.Size, CursorOutline.Size = UDim2.fromOffset(17, 17), UDim2.fromOffset(19, 19);
+            Cursor.Rotation, CursorOutline.Rotation = -45, -45;
 
-                    local mPos = InputService:GetMouseLocation();
-                    local udim = UDim2.fromOffset(mPos.X, mPos.Y - GuiService:GetGuiInset().Y - 1);
+            while Library.Toggled and ScreenGui.Parent do
+                InputService.MouseIconEnabled = true;
 
-                    Cursor.ImageColor3 = Library.AccentColor;
-                    Cursor.Position, CursorOutline.Position = udim, udim - UDim2.fromOffset(1, 1);
+                local mPos = InputService:GetMouseLocation();
+                local udim = UDim2.fromOffset(mPos.X, mPos.Y - GuiService:GetGuiInset().Y - 1);
 
-                    RenderStepped:Wait();
-                end;
+                Cursor.ImageColor3 = Library.AccentColor;
+                Cursor.Position, CursorOutline.Position = udim, udim - UDim2.fromOffset(1, 1);
 
-                InputService.MouseIconEnabled = State;
+                RenderStepped:Wait();
+            end;
 
-                Cursor:Destroy();
-                CursorOutline:Destroy();
-            end);
+            InputService.MouseIconEnabled = State;
+
+            Cursor:Destroy();
+            CursorOutline:Destroy();
+        end);
 
         Library:UpdateBlur();
-    end
+    end;
+end
 
     Library:GiveSignal(InputService.InputBegan:Connect(function(Input, Processed)
         if type(Library.ToggleKeybind) == 'table' and Library.ToggleKeybind.Type == 'KeyPicker' then
