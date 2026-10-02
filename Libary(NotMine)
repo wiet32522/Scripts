@@ -59,9 +59,9 @@ local Library = {
     Toggled = false;
     WireframeDrag = true;
     UseBlur = true;
-    BlurSize = 24;
+    BlurSize = 0;
     UseDarken = true;
-    DarkenAmount = 55;
+    DarkenAmount = 0;
 
     KeybindMode = 'All';
 
