@@ -1,4 +1,3 @@
-wait (2)
 
 local Players = game:GetService("Players")
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
@@ -116,7 +115,7 @@ local AutoFarmPreference = ReadAutoFarmPreference()
 if typeof(queue_on_teleport) == "function" then
     pcall(function()
         queue_on_teleport([[
-            loadstring(game:HttpGet("https://raw.githubusercontent.com/wiet32522/Scripts/refs/heads/main/gvrd"))()
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/wiet32522/Scripts/refs/heads/main/LifeSentence"))()
         ]])
     end)
 end
@@ -1205,7 +1204,7 @@ local function fallDown(root)
     log("Gravity restored to 196.2")
 
     log("Teleporting 350 studs down")
-    root.CFrame = root.CFrame - Vector3.new(0, 350, 0)
+    root.CFrame = root.CFrame - Vector3.new(0, 450, 0)
 
     return true
 end
@@ -1305,7 +1304,7 @@ local function Start()
 
             workspace.Gravity = 196.2
             if oldRoot then
-                oldRoot.CFrame = oldRoot.CFrame - Vector3.new(0, 350, 0)
+                oldRoot.CFrame = oldRoot.CFrame - Vector3.new(0, 450, 0)
             end
 
             local newCharacter, newRoot = waitForNewCharacter(oldCharacter, 30)
