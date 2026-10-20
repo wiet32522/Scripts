@@ -1319,7 +1319,7 @@ local function Start()
             end
 
             workspace.Gravity = 196.2
-            log("Two-minute reset: gravity set to 196.2 immediately after teleport")
+            log("Two-minute reset: gravity set to 196.2 immediately after teleport; keeping it enabled during the fall/respawn")
 
             if isEscaped() then
                 log("Escape changed during downward reset; keeping gravity at 196.2 and entering escaped flow")
@@ -1327,9 +1327,6 @@ local function Start()
                 root = character and character:FindFirstChild("HumanoidRootPart") or root
                 break
             end
-
-            workspace.Gravity = 0
-            log("Still not escaped after reset; gravity set back to 0")
 
             local newCharacter, newRoot = waitForNewCharacter(oldCharacter, 30)
             if not newCharacter or not newRoot then
@@ -1340,7 +1337,8 @@ local function Start()
                     root = character and character:FindFirstChild("HumanoidRootPart") or root
                     break
                 end
-                log("WARNING: reset did not produce a respawn within 30 seconds; restarting 2-minute timer")
+                workspace.Gravity = 0
+                log("WARNING: reset did not produce a respawn within 30 seconds; gravity returned to 0 and restarting 2-minute timer")
                 nextResetAt = os.clock() + 120
                 continue
             end
@@ -1359,7 +1357,7 @@ local function Start()
             end
 
             workspace.Gravity = 0
-            log("Reset respawn complete and still not escaped; gravity set to 0")
+            log("Reset respawn complete and still not escaped; gravity set to 0 only after respawn")
             if not teleport(root, pos1, "pos1 after fall respawn") then
                 log("ERROR: could not return to pos1 after reset respawn")
                 return
