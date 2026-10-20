@@ -1,4 +1,5 @@
-wait (2)
+wait(2)
+
 local Players = game:GetService("Players")
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 local Lighting = game:GetService("Lighting")
@@ -80,14 +81,6 @@ local function SendExecutionWebhook()
             }),
         })
     end)
-end
-
-local queueFunction = queue_on_teleport or queueonteleport or (syn and syn.queue_on_teleport)
-
-if type(queueFunction) == "function" then
-    queueFunction('loadstring(game:HttpGet("https://raw.githubusercontent.com/wiet32522/Scripts/refs/heads/main/gvrd"))()')
-else
-    warn("[ServerHop] Queue-on-teleport is not supported by this executor")
 end
 
 local IntroPlayer = Players.LocalPlayer
@@ -1032,6 +1025,14 @@ end
 
 local function hopToMatchingServer()
     local success, err = pcall(function()
+        local queueFunction = queue_on_teleport or queueonteleport or (syn and syn.queue_on_teleport)
+        if type(queueFunction) == "function" then
+            queueFunction('loadstring(game:HttpGet("https://raw.githubusercontent.com/wiet32522/Scripts/refs/heads/main/gvrd"))()')
+            log("Queued script to run after teleport")
+        else
+            warn("[ServerHop] Queue-on-teleport is not supported by this executor")
+        end
+
         local source = game:HttpGet("https://raw.githubusercontent.com/wiet32522/Scripts/refs/heads/main/ServerHop")
         local module = loadstring(source)()
 
@@ -1274,7 +1275,6 @@ local function Start()
             local oldCharacter = player.Character
             local oldRoot = oldCharacter and oldCharacter:FindFirstChild("HumanoidRootPart")
 
-            workspace.Gravity = 192.6
             if oldRoot then
                 oldRoot.CFrame = oldRoot.CFrame - Vector3.new(0, 375, 0)
             end
