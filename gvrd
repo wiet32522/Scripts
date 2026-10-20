@@ -1,4 +1,4 @@
-wait (2)
+wait(2)
 local Players = game:GetService("Players")
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 local Lighting = game:GetService("Lighting")
@@ -1314,14 +1314,7 @@ local function Start()
                 oldRoot.CFrame = oldRoot.CFrame - Vector3.new(0, 375, 0)
             end
 
-            local newCharacter, newRoot = waitForNewCharacter(oldCharacter, 5)
-            if not newCharacter or not newRoot then
-                local oldHumanoid = oldCharacter and oldCharacter:FindFirstChildOfClass("Humanoid")
-                if oldHumanoid and oldHumanoid.Health > 0 then
-                    oldHumanoid.Health = 0
-                end
-                newCharacter, newRoot = waitForNewCharacter(oldCharacter, 30)
-            end
+            local newCharacter, newRoot = waitForNewCharacter(oldCharacter, 30)
 
             if not newCharacter or not newRoot then
                 log("Fall respawn failed; stopping escape wait")
