@@ -1284,13 +1284,13 @@ local function Start()
 
             workspace.Gravity = 0
             log("Replacement character ready; gravity set to 0 while not escaped")
-            if not moveTo(root, pos1, 18, "pos1 after death") then
+            if not teleport(root, pos1, "pos1 after death") then
                 if isEscaped() then
-                    log("Escape detected during recovery movement")
+                    log("Escape detected during recovery teleport")
                     workspace.Gravity = 196.2
                     break
                 end
-                log("Recovery movement did not complete; retrying")
+                log("Recovery teleport did not complete; retrying")
                 task.wait(0.1)
                 continue
             end
