@@ -1,4 +1,4 @@
-wait(2)
+wait (2)
 local Players = game:GetService("Players")
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 local Lighting = game:GetService("Lighting")
@@ -1023,66 +1023,23 @@ local function breakableGlassFarm(root)
 end
 
 local function hopToMatchingServer()
-    local serverList = ReplicatedStorage:FindFirstChild("Servers_List")
-    local events = ReplicatedStorage:FindFirstChild("Events")
-    local introLoad = events and events:FindFirstChild("IntroLoad")
+    local success, err = pcall(function()
+        local source = game:HttpGet("https://raw.githubusercontent.com/wiet32522/Scripts/refs/heads/main/ServerHop")
+        local module = loadstring(source)()
 
-    if not serverList or not introLoad then
+        if type(module) ~= "table" or type(module.Teleport) ~= "function" then
+            error("ServerHop did not return a module with Teleport")
+        end
+
+        module:Teleport(game.PlaceId)
+    end)
+
+    if not success then
+        warn("[ServerHop] Failed: " .. tostring(err))
         return false
     end
 
-    local currentServer
-    local currentType
-
-    for _, server in ipairs(serverList:GetChildren()) do
-        local yourServer = server:FindFirstChild("YourServer")
-
-        if yourServer and yourServer:IsA("BoolValue") and yourServer.Value == true then
-            currentServer = server
-
-            local serverType = server:FindFirstChild("ServerType")
-            if serverType and serverType:IsA("StringValue") then
-                currentType = serverType.Value
-            end
-
-            break
-        end
-    end
-
-    if not currentServer or currentType == nil then
-        return false
-    end
-
-    for _, server in ipairs(serverList:GetChildren()) do
-        if not running then
-            return false
-        end
-
-        if server ~= currentServer then
-            local serverType = server:FindFirstChild("ServerType")
-
-            if serverType and serverType:IsA("StringValue") and serverType.Value == currentType then
-                pcall(function()
-                    introLoad:FireServer("RequestJoinServer", server)
-                end)
-
-                local deadline = os.clock() + 0.1
-                repeat
-                    task.wait(0.1)
-
-                    for _, checkServer in ipairs(serverList:GetChildren()) do
-                        local yourServer = checkServer:FindFirstChild("YourServer")
-                        if yourServer and yourServer:IsA("BoolValue") and yourServer.Value == true
-                            and checkServer ~= currentServer then
-                            return true
-                        end
-                    end
-                until os.clock() >= deadline or not running
-            end
-        end
-    end
-
-    return false
+    return true
 end
 
 local function museumFarm(root)
