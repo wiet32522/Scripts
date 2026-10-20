@@ -1247,8 +1247,8 @@ local function Start()
         return
     end
 
-    local nextResetAt = os.clock() + 120
-    log("Two-minute timer started; deadline in 120 seconds")
+    local nextResetAt = os.clock() + 40
+    log("Reset timer started; deadline in 40 seconds")
 
     while running do
         if isEscaped() then
@@ -1295,7 +1295,7 @@ local function Start()
         end
 
         if os.clock() >= nextResetAt then
-            log("Two-minute deadline reached; checking escape state before any gravity changes")
+            log("40-second deadline reached; checking escape state before any gravity changes")
             if isEscaped() then
                 log("Already escaped at timer deadline; skip downward reset and preserve gravity 196.2")
                 workspace.Gravity = 196.2
@@ -1312,14 +1312,14 @@ local function Start()
                     workspace.Gravity = 196.2
                 end
             end)
-            log("Two-minute reset: gravity enabled before downward teleport and being enforced during reset")
+            log("40-second reset: gravity enabled before downward teleport and being enforced during reset")
 
             if oldRoot and oldRoot.Parent then
                 local ok, err = pcall(function()
                     oldRoot.CFrame = oldRoot.CFrame - Vector3.new(0, 375, 0)
                 end)
                 if ok then
-                    log("Two-minute reset: teleported 375 studs down")
+                    log("40-second reset: teleported 375 studs down")
                 else
                     log("ERROR: two-minute downward teleport failed: " .. tostring(err))
                 end
@@ -1358,7 +1358,7 @@ local function Start()
                     root.CFrame = CFrame.new(pos1)
                     task.wait(0.25)
                     log("Reset timeout recovery: directly teleported replacement character to pos1")
-                    nextResetAt = os.clock() + 120
+                    nextResetAt = os.clock() + 40
                     continue
                 end
 
@@ -1382,7 +1382,7 @@ local function Start()
                 root.CFrame = CFrame.new(pos1)
                 task.wait(0.25)
                 log("Late reset respawn: directly teleported replacement character to pos1")
-                nextResetAt = os.clock() + 120
+                nextResetAt = os.clock() + 40
                 continue
             end
 
@@ -1408,8 +1408,8 @@ local function Start()
             root.CFrame = CFrame.new(pos1)
             task.wait(0.25)
             log("Reset respawn recovery: directly teleported to pos1 (no tween)")
-            nextResetAt = os.clock() + 120
-            log("Two-minute timer restarted after reset respawn")
+            nextResetAt = os.clock() + 40
+            log("40-second timer restarted after reset respawn")
         end
 
         if not moveTo(root, pos2, 18, "pos2") then
