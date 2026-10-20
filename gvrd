@@ -1247,8 +1247,8 @@ local function Start()
         return
     end
 
-    local nextResetAt = os.clock() + 40
-    log("Reset timer started; deadline in 40 seconds")
+    local nextResetAt = nil
+    log("40-second timer will start after the movement tween returns to pos1")
 
     while running do
         if isEscaped() then
@@ -1294,7 +1294,7 @@ local function Start()
             log("Post-death recovery: directly teleported to pos1 (no tween)")
         end
 
-        if os.clock() >= nextResetAt then
+        if nextResetAt and os.clock() >= nextResetAt then
             log("40-second deadline reached; checking escape state before any gravity changes")
             if isEscaped() then
                 log("Already escaped at timer deadline; skip downward reset and preserve gravity 196.2")
@@ -1358,7 +1358,7 @@ local function Start()
                     root.CFrame = CFrame.new(pos1)
                     task.wait(0.25)
                     log("Reset timeout recovery: directly teleported replacement character to pos1")
-                    nextResetAt = os.clock() + 40
+                    nextResetAt = nil
                     continue
                 end
 
@@ -1382,7 +1382,7 @@ local function Start()
                 root.CFrame = CFrame.new(pos1)
                 task.wait(0.25)
                 log("Late reset respawn: directly teleported replacement character to pos1")
-                nextResetAt = os.clock() + 40
+                nextResetAt = nil
                 continue
             end
 
@@ -1408,8 +1408,8 @@ local function Start()
             root.CFrame = CFrame.new(pos1)
             task.wait(0.25)
             log("Reset respawn recovery: directly teleported to pos1 (no tween)")
-            nextResetAt = os.clock() + 40
-            log("40-second timer restarted after reset respawn")
+            nextResetAt = nil
+            log("Reset recovery complete; 40-second timer will start after the next tween returns to pos1")
         end
 
         if not moveTo(root, pos2, 18, "pos2") then
@@ -1436,6 +1436,11 @@ local function Start()
             end
             task.wait(0.1)
             continue
+        end
+
+        if not nextResetAt then
+            nextResetAt = os.clock() + 40
+            log("40-second reset timer started; character has completed the tween back to pos1")
         end
 
         task.wait()
