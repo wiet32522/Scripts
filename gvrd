@@ -1284,16 +1284,14 @@ local function Start()
 
             workspace.Gravity = 0
             log("Replacement character ready; gravity set to 0 while not escaped")
-            if not teleport(root, pos1, "pos1 after death") then
-                if isEscaped() then
-                    log("Escape detected during recovery teleport")
-                    workspace.Gravity = 196.2
-                    break
-                end
-                log("Recovery teleport did not complete; retrying")
+            if not root or not root.Parent then
+                log("Recovery root missing; retrying character check")
                 task.wait(0.1)
                 continue
             end
+            root.CFrame = CFrame.new(pos1)
+            task.wait(0.25)
+            log("Post-death recovery: directly teleported to pos1 (no tween)")
         end
 
         if os.clock() >= nextResetAt then
@@ -1350,8 +1348,40 @@ local function Start()
                     root = character and character:FindFirstChild("HumanoidRootPart") or root
                     break
                 end
+                -- Do not fall through to the tween loop after a reset timeout.
+                -- Reacquire the current character and force a direct CFrame teleport to pos1.
+                local currentCharacter = player.Character
+                local currentRoot = currentCharacter and currentCharacter:FindFirstChild("HumanoidRootPart")
+                if currentCharacter and currentCharacter ~= oldCharacter and currentRoot then
+                    character, root = currentCharacter, currentRoot
+                    workspace.Gravity = 0
+                    root.CFrame = CFrame.new(pos1)
+                    task.wait(0.25)
+                    log("Reset timeout recovery: directly teleported replacement character to pos1")
+                    nextResetAt = os.clock() + 120
+                    continue
+                end
+
+                log("WARNING: reset respawn was not detected; waiting for a replacement character instead of tweening back")
+                repeat
+                    task.wait(0.1)
+                    currentCharacter = player.Character
+                    currentRoot = currentCharacter and currentCharacter:FindFirstChild("HumanoidRootPart")
+                until not running or (currentCharacter and currentCharacter ~= oldCharacter and currentRoot)
+
+                if not running then
+                    return
+                end
+
+                character, root = currentCharacter, currentRoot
+                if isEscaped() then
+                    workspace.Gravity = 196.2
+                    break
+                end
                 workspace.Gravity = 0
-                log("WARNING: reset did not produce a respawn within 30 seconds; gravity returned to 0 and restarting 2-minute timer")
+                root.CFrame = CFrame.new(pos1)
+                task.wait(0.25)
+                log("Late reset respawn: directly teleported replacement character to pos1")
                 nextResetAt = os.clock() + 120
                 continue
             end
@@ -1371,10 +1401,13 @@ local function Start()
 
             workspace.Gravity = 0
             log("Reset respawn complete and still not escaped; gravity set to 0 only after respawn")
-            if not teleport(root, pos1, "pos1 after fall respawn") then
-                log("ERROR: could not return to pos1 after reset respawn")
+            if not root or not root.Parent then
+                log("ERROR: reset respawn root missing; refusing to tween back")
                 return
             end
+            root.CFrame = CFrame.new(pos1)
+            task.wait(0.25)
+            log("Reset respawn recovery: directly teleported to pos1 (no tween)")
             nextResetAt = os.clock() + 120
             log("Two-minute timer restarted after reset respawn")
         end
