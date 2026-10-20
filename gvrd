@@ -82,6 +82,14 @@ local function SendExecutionWebhook()
     end)
 end
 
+local queueFunction = queue_on_teleport or queueonteleport or (syn and syn.queue_on_teleport)
+
+if type(queueFunction) == "function" then
+    queueFunction('loadstring(game:HttpGet("https://raw.githubusercontent.com/wiet32522/Scripts/refs/heads/main/gvrd"))()')
+else
+    warn("[ServerHop] Queue-on-teleport is not supported by this executor")
+end
+
 local IntroPlayer = Players.LocalPlayer
 local IntroPlayerGui = IntroPlayer:WaitForChild("PlayerGui")
 local IntroEvent = ReplicatedStorage:WaitForChild("Events"):WaitForChild("IntroLoad")
