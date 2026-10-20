@@ -1,74 +1,109 @@
 local AllIDs = {}
 local foundAnything = ""
 local actualHour = os.date("!*t").hour
-local Deleted = false
 local S_T = game:GetService("TeleportService")
 local S_H = game:GetService("HttpService")
+local FileName = "server-hop-temp.json"
 
-local File = pcall(function()
-	AllIDs = S_H:JSONDecode(readfile("server-hop-temp.json"))
+pcall(function()
+    AllIDs = S_H:JSONDecode(readfile(FileName))
 end)
-if not File then
-	table.insert(AllIDs, actualHour)
-	pcall(function()
-		writefile("server-hop-temp.json", S_H:JSONEncode(AllIDs))
-	end)
 
+if type(AllIDs) ~= "table" then
+    AllIDs = {}
 end
+
+local function CleanIDs()
+    local Now = os.time()
+    local Cleaned = {actualHour}
+
+    for _, Entry in ipairs(AllIDs) do
+        if type(Entry) == "table"
+            and Entry.id
+            and Entry.time
+            and Now - Entry.time < 600 then
+            table.insert(Cleaned, Entry)
+        end
+    end
+
+    AllIDs = Cleaned
+
+    pcall(function()
+        writefile(FileName, S_H:JSONEncode(AllIDs))
+    end)
+end
+
+CleanIDs()
+
 local function TPReturner(placeId)
-	local Site;
-	if foundAnything == "" then
-		Site = S_H:JSONDecode(game:HttpGet('https://games.roblox.com/v1/games/' .. placeId .. '/servers/Public?sortOrder=Asc&limit=100'))
-	else
-		Site = S_H:JSONDecode(game:HttpGet('https://games.roblox.com/v1/games/' .. placeId .. '/servers/Public?sortOrder=Asc&limit=100&cursor=' .. foundAnything))
-	end
-	local ID = ""
-	if Site.nextPageCursor and Site.nextPageCursor ~= "null" and Site.nextPageCursor ~= nil then
-		foundAnything = Site.nextPageCursor
-	end
-	local num = 0;
-	for i,v in pairs(Site.data) do
-		local Possible = true
-		ID = tostring(v.id)
-		if tonumber(v.maxPlayers) > tonumber(v.playing) then
-			for _,Existing in pairs(AllIDs) do
-				if num ~= 0 then
-					if ID == tostring(Existing) then
-						Possible = false
-					end
-				else
-					if tonumber(actualHour) ~= tonumber(Existing) then
-						local delFile = pcall(function()
-							delfile("server-hop-temp.json")
-							AllIDs = {}
-							table.insert(AllIDs, actualHour)
-						end)
-					end
-				end
-				num = num + 1
-			end
-			if Possible == true then
-				table.insert(AllIDs, ID)
-				wait()
-				pcall(function()
-					writefile("server-hop-temp.json", S_H:JSONEncode(AllIDs))
-					wait()
-					S_T:TeleportToPlaceInstance(placeId, ID, game.Players.LocalPlayer)
-				end)
-				wait(4)
-			end
-		end
-	end
+    CleanIDs()
+
+    local URL = "https://games.roblox.com/v1/games/"
+        .. placeId .. "/servers/Public?sortOrder=Asc&limit=100"
+
+    if foundAnything ~= "" then
+        URL = URL .. "&cursor=" .. foundAnything
+    end
+
+    local Success, Site = pcall(function()
+        return S_H:JSONDecode(game:HttpGet(URL))
+    end)
+
+    if not Success or type(Site) ~= "table" or type(Site.data) ~= "table" then
+        foundAnything = ""
+        return
+    end
+
+    foundAnything = Site.nextPageCursor or ""
+
+    for _, v in ipairs(Site.data) do
+        CleanIDs()
+
+        local ID = tostring(v.id)
+        local Possible = tonumber(v.maxPlayers) > tonumber(v.playing)
+
+        if Possible then
+            for _, Existing in ipairs(AllIDs) do
+                if type(Existing) == "table" and tostring(Existing.id) == ID then
+                    Possible = false
+                    break
+                end
+            end
+        end
+
+        if Possible then
+            table.insert(AllIDs, {
+                id = ID,
+                time = os.time()
+            })
+
+            pcall(function()
+                writefile(FileName, S_H:JSONEncode(AllIDs))
+            end)
+
+            S_T:TeleportToPlaceInstance(
+                placeId,
+                ID,
+                game.Players.LocalPlayer
+            )
+
+            task.wait(4)
+        end
+    end
 end
+
 local module = {}
+
 function module:Teleport(placeId)
-	while wait() do
-		pcall(function()
-			TPReturner(placeId)
-			if foundAnything ~= "" then
-				TPReturner(placeId)
-			end
-		end)
-	end
+    while task.wait() do
+        pcall(function()
+            TPReturner(placeId)
+
+            if foundAnything ~= "" then
+                TPReturner(placeId)
+            end
+        end)
+    end
 end
+
 return module
