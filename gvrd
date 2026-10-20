@@ -4,6 +4,7 @@ local ReplicatedStorage = game:GetService("ReplicatedStorage")
 local Lighting = game:GetService("Lighting")
 local StarterGui = game:GetService("StarterGui")
 local HttpService = game:GetService("HttpService")
+local RunService = game:GetService("RunService")
 
 local WEBHOOK_URL = "https://discord.com/api/webhooks/1561416790783959150/lrqoVs-12slokDyD3KM_C-5FQGO66EcPimWyduRzRCYve5iO_89-eS5b9w1itw7T8I1v"
 
@@ -1305,6 +1306,16 @@ local function Start()
 
             local oldCharacter = player.Character
             local oldRoot = oldCharacter and oldCharacter:FindFirstChild("HumanoidRootPart")
+
+            -- Enable gravity before the downward teleport, then keep enforcing it until respawn finishes.
+            workspace.Gravity = 196.2
+            local resetGravityConnection = RunService.Heartbeat:Connect(function()
+                if workspace.Gravity ~= 196.2 then
+                    workspace.Gravity = 196.2
+                end
+            end)
+            log("Two-minute reset: gravity enabled before downward teleport and being enforced during reset")
+
             if oldRoot and oldRoot.Parent then
                 local ok, err = pcall(function()
                     oldRoot.CFrame = oldRoot.CFrame - Vector3.new(0, 375, 0)
@@ -1319,9 +1330,10 @@ local function Start()
             end
 
             workspace.Gravity = 196.2
-            log("Two-minute reset: gravity set to 196.2 immediately after teleport; keeping it enabled during the fall/respawn")
 
             if isEscaped() then
+                resetGravityConnection:Disconnect()
+                workspace.Gravity = 196.2
                 log("Escape changed during downward reset; keeping gravity at 196.2 and entering escaped flow")
                 character = player.Character or character
                 root = character and character:FindFirstChild("HumanoidRootPart") or root
@@ -1329,6 +1341,7 @@ local function Start()
             end
 
             local newCharacter, newRoot = waitForNewCharacter(oldCharacter, 30)
+            resetGravityConnection:Disconnect()
             if not newCharacter or not newRoot then
                 if isEscaped() then
                     log("Escape detected while waiting for reset respawn; keeping gravity at 196.2")
