@@ -1,5 +1,4 @@
 wait (2)
-
 local Players = game:GetService("Players")
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 local Lighting = game:GetService("Lighting")
@@ -112,14 +111,6 @@ local function SaveAutoFarmPreference(value)
 end
 
 local AutoFarmPreference = ReadAutoFarmPreference()
-
-if typeof(queue_on_teleport) == "function" then
-    pcall(function()
-        queue_on_teleport([[
-            loadstring(game:HttpGet("https://raw.githubusercontent.com/wiet32522/Scripts/refs/heads/main/gvrd"))()
-        ]])
-    end)
-end
 
 local IntroProcessing = false
 local IntroConnections = {}
@@ -550,7 +541,6 @@ SendExecutionWebhook()
 -- Additional automatic bank, jewelry, and museum farm
 local Players = game:GetService("Players")
 local TweenService = game:GetService("TweenService")
-local TeleportService = game:GetService("TeleportService")
 
 local player = Players.LocalPlayer
 
@@ -1136,12 +1126,8 @@ local function museumFarm(root)
             lastRefresh = os.clock()
 
             if artFolder and artModelCount == 0 then
-                log("Art folder has no Art models; hopping to another server")
-                if not hopToMatchingServer() then
-                    pcall(function()
-                        TeleportService:Teleport(game.PlaceId, player)
-                    end)
-                end
+                log("Art folder has no Art models; requesting another matching server through IntroLoad")
+                hopToMatchingServer()
                 return
             end
         end
@@ -1187,11 +1173,7 @@ local function museumFarm(root)
 
     if running then
         task.wait(1)
-        if not hopToMatchingServer() then
-            pcall(function()
-                TeleportService:Teleport(game.PlaceId, player)
-            end)
-        end
+        hopToMatchingServer()
     end
 end
 
@@ -1292,10 +1274,34 @@ local function Start()
 
     local nextResetAt = os.clock() + 120
 
-    while running and root and root.Parent do
+    while running do
         if isEscaped() then
             log("Team changed to Escaped")
             break
+        end
+
+        local currentCharacter = player.Character
+        local currentHumanoid = currentCharacter and currentCharacter:FindFirstChildOfClass("Humanoid")
+        if not currentCharacter or currentCharacter ~= character or not root or not root.Parent or not currentHumanoid or currentHumanoid.Health <= 0 then
+            local oldCharacter = character
+            local newCharacter, newRoot = waitForNewCharacter(oldCharacter, 30)
+
+            if not newCharacter or not newRoot then
+                task.wait(0.1)
+                continue
+            end
+
+            if isEscaped() then
+                character, root = newCharacter, newRoot
+                break
+            end
+
+            character, root = newCharacter, newRoot
+            workspace.Gravity = 0
+            if not moveTo(root, pos1, 18, "pos1 after death") then
+                task.wait(0.1)
+                continue
+            end
         end
 
         if os.clock() >= nextResetAt then
@@ -1336,7 +1342,11 @@ local function Start()
         end
 
         if not moveTo(root, pos2, 18, "pos2") then
-            break
+            if isEscaped() then
+                break
+            end
+            task.wait(0.1)
+            continue
         end
 
         if isEscaped() then
@@ -1345,7 +1355,11 @@ local function Start()
         end
 
         if not moveTo(root, pos1, 18, "pos1") then
-            break
+            if isEscaped() then
+                break
+            end
+            task.wait(0.1)
+            continue
         end
 
         task.wait()
