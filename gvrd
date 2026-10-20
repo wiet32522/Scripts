@@ -1151,11 +1151,18 @@ local function fallDown(root)
         return false
     end
 
-    workspace.Gravity = 192.6
-    log("Gravity set to 192.6")
-
     log("Teleporting 375 studs down")
     root.CFrame = root.CFrame - Vector3.new(0, 375, 0)
+
+    workspace.Gravity = 196.2
+    log("Gravity set to 196.2 after fall")
+
+    if not isEscaped() then
+        workspace.Gravity = 0
+        log("Not escaped; gravity reset to 0")
+    else
+        log("Escaped; gravity remains at 196.2")
+    end
 
     return true
 end
@@ -1279,6 +1286,14 @@ local function Start()
 
             if oldRoot then
                 oldRoot.CFrame = oldRoot.CFrame - Vector3.new(0, 375, 0)
+            end
+
+            workspace.Gravity = 196.2
+            log("Gravity set to 196.2 immediately after the 2-minute fall")
+
+            if not isEscaped() then
+                workspace.Gravity = 0
+                log("Not escaped; gravity reset to 0")
             end
 
             local newCharacter, newRoot = waitForNewCharacter(oldCharacter, 30)
