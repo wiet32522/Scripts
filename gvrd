@@ -1,5 +1,4 @@
 wait(2)
-
 local Players = game:GetService("Players")
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 local Lighting = game:GetService("Lighting")
@@ -563,11 +562,14 @@ local glassFarmPositions = {
 }
 
 local museumPositions = {
-    Vector3.new(81, 3, 1845),
-    Vector3.new(73, 3, 1862),
-    Vector3.new(92, 3, 1883),
-    Vector3.new(82, 3, 1902),
-    Vector3.new(109, 3, 1903),
+    Vector3.new(108, 3, 1901),
+    Vector3.new(82, 3, 1903),
+    Vector3.new(91, 3, 1887),
+    Vector3.new(95, 3, 1866),
+    Vector3.new(75, 3, 1867),
+    Vector3.new(72, 3, 1848),
+    Vector3.new(83, 3, 1841),
+    Vector3.new(95, 3, 1844),
 }
 
 local running = true
@@ -1010,7 +1012,7 @@ local function breakableGlassFarm(root)
             if not teleport(root, glassFarmPositions[index], "glassFarmPosition" .. index) then
                 break
             end
-            nextPositionAt = os.clock() + 0.5
+            nextPositionAt = os.clock() + 0.35
 
             if visitedThisCycle >= 1 and allFinished then
                 log("Jewelry/glass prompts have been attempted; moving to Museum")
